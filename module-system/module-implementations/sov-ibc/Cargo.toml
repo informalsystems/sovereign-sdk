@@ -27,7 +27,6 @@ serde_json = { workspace = true, optional = true }
 thiserror = { workspace = true }
 uint = "0.9"
 
-
 ibc = { workspace = true }
 ibc-proto = { workspace = true }
 prost = { version = "0.11", default-features = false }
