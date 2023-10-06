@@ -116,3 +116,9 @@ clean-rollup-db:
         fi
 	@echo removing rollup database "${path}"
 	rm -rf "${path}"
+
+test-generate-create-client-tx: check-container-running build-sov-cli
+	$(SOV_CLI_REL_PATH) transactions import from-file ibc --path ../test-data/requests/ibc_create_client.json
+
+test-create-client: set-rpc-url test-generate-create-client-tx import-keys
+	$(SOV_CLI_REL_PATH) rpc submit-batch by-nickname DANGER__DO_NOT_USE_WITH_REAL_MONEY
