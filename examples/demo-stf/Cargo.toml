@@ -23,31 +23,31 @@ hex = { workspace = true }
 tracing = { workspace = true }
 
 
-sov-stf-runner = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "80b76e5" }
-sov-rollup-interface = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "80b76e5" }
-sov-cli = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "80b76e5", optional = true }
-sov-sequencer-registry = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "80b76e5" }
-sov-blob-storage = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "80b76e5" }
-sov-bank = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "80b76e5" }
-sov-nft-module = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "80b76e5" }
-sov-ibc = { git = "https://github.com/informalsystems/sovereign-ibc", rev = "fbd4db5" }
-sov-ibc-transfer = { git = "https://github.com/informalsystems/sovereign-ibc", rev = "fbd4db5" }
+sov-stf-runner = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191" }
+sov-rollup-interface = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191" }
+sov-cli = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191", optional = true }
+sov-sequencer-registry = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191" }
+sov-blob-storage = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191" }
+sov-bank = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191" }
+sov-nft-module = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191" }
+sov-ibc = { git = "https://github.com/informalsystems/sovereign-ibc", rev = "650a794" }
+sov-ibc-transfer = { git = "https://github.com/informalsystems/sovereign-ibc", rev = "650a794" }
 
-sov-chain-state = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "80b76e5" }
-sov-modules-stf-template = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "80b76e5" }
-sov-value-setter = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "80b76e5" }
-sov-accounts = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "80b76e5" }
-sov-state = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "80b76e5" }
-sov-modules-api = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "80b76e5" }
-sov-sequencer = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "80b76e5", optional = true }
+sov-chain-state = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191" }
+sov-modules-stf-template = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191" }
+sov-value-setter = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191" }
+sov-accounts = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191" }
+sov-state = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191" }
+sov-modules-api = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191" }
+sov-sequencer = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191", optional = true }
 # Only enable the evm on "experimental" feature
-sov-evm = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "80b76e5", optional = true }
+sov-evm = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191", optional = true }
 reth-primitives = { workspace = true, optional = true }
 
 [dev-dependencies]
-sov-rollup-interface = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "80b76e5", features = ["mocks"] }
-sov-data-generators = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "80b76e5" }
-demo-stf = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "80b76e5", features = ["native"] }
+sov-rollup-interface = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191", features = ["mocks"] }
+sov-data-generators = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191" }
+demo-stf = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191", features = ["native"] }
 tempfile = { workspace = true }
 rand = "0.8"
 

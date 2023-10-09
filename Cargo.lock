@@ -1545,7 +1545,7 @@ version = "0.2.0"
 [[package]]
 name = "const-rollup-config"
 version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
 
 [[package]]
 name = "constant_time_eq"
@@ -2050,31 +2050,31 @@ dependencies = [
  "anyhow",
  "borsh",
  "clap 4.4.6",
- "demo-stf 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "demo-stf 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
  "hex",
  "jsonrpsee 0.18.2",
  "rand 0.8.5",
  "reth-primitives",
  "serde",
  "serde_json",
- "sov-accounts 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-blob-storage 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-chain-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-cli 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-data-generators 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-evm 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-ibc 0.1.0 (git+https://github.com/informalsystems/sovereign-ibc?rev=fbd4db5)",
- "sov-ibc-transfer",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-modules-stf-template 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-nft-module 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-sequencer 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-sequencer-registry 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-stf-runner 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-value-setter 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "sov-accounts 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-blob-storage 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-chain-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-cli 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-data-generators 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-evm 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-ibc 0.1.0 (git+https://github.com/informalsystems/sovereign-ibc?rev=650a794)",
+ "sov-ibc-transfer 0.1.0 (git+https://github.com/informalsystems/sovereign-ibc?rev=650a794)",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-modules-stf-template 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-nft-module 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-sequencer 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-sequencer-registry 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-stf-runner 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-value-setter 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
  "tempfile",
  "tokio",
  "toml 0.8.2",
@@ -2084,7 +2084,7 @@ dependencies = [
 [[package]]
 name = "demo-stf"
 version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
 dependencies = [
  "anyhow",
  "borsh",
@@ -2094,22 +2094,23 @@ dependencies = [
  "reth-primitives",
  "serde",
  "serde_json",
- "sov-accounts 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-blob-storage 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-chain-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-cli 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-evm 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-ibc 0.1.0 (git+https://github.com/informalsystems/sovereign-ibc?rev=bb79122)",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-modules-stf-template 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-nft-module 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-sequencer 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-sequencer-registry 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-stf-runner 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-value-setter 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
+ "sov-accounts 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "sov-blob-storage 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "sov-chain-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "sov-cli 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "sov-evm 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "sov-ibc 0.1.0 (git+https://github.com/informalsystems/sovereign-ibc?rev=fbd4db5)",
+ "sov-ibc-transfer 0.1.0 (git+https://github.com/informalsystems/sovereign-ibc?rev=fbd4db5)",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "sov-modules-stf-template 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "sov-nft-module 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "sov-sequencer 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "sov-sequencer-registry 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "sov-stf-runner 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "sov-value-setter 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "tokio",
  "toml 0.8.2",
  "tracing",
@@ -6550,14 +6551,14 @@ dependencies = [
 
 [[package]]
 name = "regex"
-version = "1.9.6"
+version = "1.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ebee201405406dbf528b8b672104ae6d6d63e6d118cb10e4d51abbc7b58044ff"
+checksum = "d119d7c7ca818f8a53c300863d4f87566aac09943aef5b355bb83969dae75d87"
 dependencies = [
  "aho-corasick",
  "memchr",
- "regex-automata 0.3.9",
- "regex-syntax 0.7.5",
+ "regex-automata 0.4.0",
+ "regex-syntax 0.8.0",
 ]
 
 [[package]]
@@ -6571,13 +6572,13 @@ dependencies = [
 
 [[package]]
 name = "regex-automata"
-version = "0.3.9"
+version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "59b23e92ee4318893fa3fe3e6fb365258efbfe6ac6ab30f090cdcbb7aa37efa9"
+checksum = "5d58da636bd923eae52b7e9120271cbefb16f399069ee566ca5ebf9c30e32238"
 dependencies = [
  "aho-corasick",
  "memchr",
- "regex-syntax 0.7.5",
+ "regex-syntax 0.8.0",
 ]
 
 [[package]]
@@ -6591,6 +6592,12 @@ name = "regex-syntax"
 version = "0.7.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "dbb5fb1acd8a1a18b3dd5be62d25485eb770e05afb408a9627d14d451bae12da"
+
+[[package]]
+name = "regex-syntax"
+version = "0.8.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c3cbb081b9784b07cceb8824c8583f86db4814d172ab043f3c23f7dc600bf83d"
 
 [[package]]
 name = "regress"
@@ -8330,6 +8337,23 @@ dependencies = [
 [[package]]
 name = "sov-accounts"
 version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "clap 4.4.6",
+ "jsonrpsee 0.18.2",
+ "schemars",
+ "serde",
+ "serde_json",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "thiserror",
+]
+
+[[package]]
+name = "sov-accounts"
+version = "0.2.0"
 source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
 dependencies = [
  "anyhow",
@@ -8341,23 +8365,6 @@ dependencies = [
  "serde_json",
  "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "thiserror",
-]
-
-[[package]]
-name = "sov-accounts"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f#962c04faf671dc4c8f025949924d0d694eb0acae"
-dependencies = [
- "anyhow",
- "borsh",
- "clap 4.4.6",
- "jsonrpsee 0.18.2",
- "schemars",
- "serde",
- "serde_json",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
  "thiserror",
 ]
 
@@ -8428,6 +8435,24 @@ dependencies = [
 [[package]]
 name = "sov-bank"
 version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "clap 4.4.6",
+ "jsonrpsee 0.18.2",
+ "schemars",
+ "serde",
+ "serde_json",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "thiserror",
+]
+
+[[package]]
+name = "sov-bank"
+version = "0.2.0"
 source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
 dependencies = [
  "anyhow",
@@ -8440,24 +8465,6 @@ dependencies = [
  "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "thiserror",
-]
-
-[[package]]
-name = "sov-bank"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f#962c04faf671dc4c8f025949924d0d694eb0acae"
-dependencies = [
- "anyhow",
- "borsh",
- "clap 4.4.6",
- "jsonrpsee 0.18.2",
- "schemars",
- "serde",
- "serde_json",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
  "thiserror",
 ]
 
@@ -8488,6 +8495,26 @@ dependencies = [
 [[package]]
 name = "sov-blob-storage"
 version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
+dependencies = [
+ "anyhow",
+ "bincode",
+ "borsh",
+ "hex",
+ "jsonrpsee 0.18.2",
+ "schemars",
+ "serde",
+ "serde_json",
+ "sov-chain-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-sequencer-registry 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "tracing",
+]
+
+[[package]]
+name = "sov-blob-storage"
+version = "0.2.0"
 source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
 dependencies = [
  "anyhow",
@@ -8502,26 +8529,6 @@ dependencies = [
  "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "sov-sequencer-registry 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "tracing",
-]
-
-[[package]]
-name = "sov-blob-storage"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f#962c04faf671dc4c8f025949924d0d694eb0acae"
-dependencies = [
- "anyhow",
- "bincode",
- "borsh",
- "hex",
- "jsonrpsee 0.18.2",
- "schemars",
- "serde",
- "serde_json",
- "sov-chain-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-sequencer-registry 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
  "tracing",
 ]
 
@@ -8562,7 +8569,7 @@ dependencies = [
 [[package]]
 name = "sov-celestia-adapter"
 version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -8579,7 +8586,7 @@ dependencies = [
  "serde",
  "serde_json",
  "sha2 0.10.8",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
  "tendermint 0.32.2",
  "tendermint-proto 0.32.2",
  "thiserror",
@@ -8607,6 +8614,21 @@ dependencies = [
 [[package]]
 name = "sov-chain-state"
 version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "jsonrpsee 0.18.2",
+ "serde",
+ "serde_json",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+]
+
+[[package]]
+name = "sov-chain-state"
+version = "0.2.0"
 source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
 dependencies = [
  "anyhow",
@@ -8617,21 +8639,6 @@ dependencies = [
  "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
-]
-
-[[package]]
-name = "sov-chain-state"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f#962c04faf671dc4c8f025949924d0d694eb0acae"
-dependencies = [
- "anyhow",
- "borsh",
- "jsonrpsee 0.18.2",
- "serde",
- "serde_json",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
 ]
 
 [[package]]
@@ -8656,6 +8663,23 @@ dependencies = [
 [[package]]
 name = "sov-cli"
 version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "directories",
+ "hex",
+ "jsonrpsee 0.18.2",
+ "serde",
+ "serde_json",
+ "sov-accounts 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+]
+
+[[package]]
+name = "sov-cli"
+version = "0.2.0"
 source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
 dependencies = [
  "anyhow",
@@ -8668,23 +8692,6 @@ dependencies = [
  "sov-accounts 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
-]
-
-[[package]]
-name = "sov-cli"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f#962c04faf671dc4c8f025949924d0d694eb0acae"
-dependencies = [
- "anyhow",
- "borsh",
- "directories",
- "hex",
- "jsonrpsee 0.18.2",
- "serde",
- "serde_json",
- "sov-accounts 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
 ]
 
 [[package]]
@@ -8704,15 +8711,15 @@ dependencies = [
 [[package]]
 name = "sov-data-generators"
 version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
 dependencies = [
  "borsh",
- "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-modules-stf-template 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-value-setter 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-modules-stf-template 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-value-setter 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
 ]
 
 [[package]]
@@ -8738,6 +8745,23 @@ dependencies = [
 [[package]]
 name = "sov-db"
 version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
+dependencies = [
+ "anyhow",
+ "bincode",
+ "borsh",
+ "byteorder",
+ "jmt",
+ "rocksdb",
+ "serde",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-schema-db 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "tokio",
+]
+
+[[package]]
+name = "sov-db"
+version = "0.2.0"
 source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
 dependencies = [
  "anyhow",
@@ -8749,23 +8773,6 @@ dependencies = [
  "serde",
  "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "sov-schema-db 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "tokio",
-]
-
-[[package]]
-name = "sov-db"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f#962c04faf671dc4c8f025949924d0d694eb0acae"
-dependencies = [
- "anyhow",
- "bincode",
- "borsh",
- "byteorder",
- "jmt",
- "rocksdb",
- "serde",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-schema-db 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
  "tokio",
 ]
 
@@ -8814,7 +8821,7 @@ dependencies = [
  "async-trait",
  "borsh",
  "clap 4.4.6",
- "const-rollup-config 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "const-rollup-config 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
  "criterion",
  "demo-stf 0.2.0",
  "ethereum-types",
@@ -8836,20 +8843,20 @@ dependencies = [
  "serde",
  "serde_json",
  "sha2 0.10.8",
- "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-celestia-adapter 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-cli 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-db 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-celestia-adapter 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-cli 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-db 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
  "sov-demo-rollup",
- "sov-ethereum 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-evm 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-modules-stf-template 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-risc0-adapter 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-sequencer 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-stf-runner 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "sov-ethereum 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-evm 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-modules-stf-template 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-risc0-adapter 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-sequencer 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-stf-runner 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
  "tempfile",
  "tendermint 0.32.2",
  "tokio",
@@ -8878,19 +8885,19 @@ dependencies = [
 [[package]]
 name = "sov-ethereum"
 version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
 dependencies = [
  "anyhow",
  "borsh",
- "demo-stf 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "demo-stf 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
  "ethers",
  "jsonrpsee 0.18.2",
  "reth-primitives",
  "reth-rpc-types",
  "serde_json",
- "sov-evm 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "sov-evm 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
 ]
 
 [[package]]
@@ -8933,6 +8940,41 @@ dependencies = [
 [[package]]
 name = "sov-evm"
 version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "bytes",
+ "clap 4.4.6",
+ "derive_more",
+ "ethereum-types",
+ "ethers",
+ "ethers-contract",
+ "ethers-core",
+ "ethers-middleware",
+ "ethers-signers",
+ "hex",
+ "jsonrpsee 0.18.2",
+ "lazy_static",
+ "reth-interfaces",
+ "reth-primitives",
+ "reth-revm",
+ "reth-rpc-types",
+ "reth-rpc-types-compat",
+ "revm",
+ "schemars",
+ "secp256k1 0.27.0",
+ "serde",
+ "serde_json",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "thiserror",
+ "tracing",
+]
+
+[[package]]
+name = "sov-evm"
+version = "0.2.0"
 source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
 dependencies = [
  "anyhow",
@@ -8966,45 +9008,18 @@ dependencies = [
 ]
 
 [[package]]
-name = "sov-evm"
+name = "sov-first-read-last-write-cache"
 version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f#962c04faf671dc4c8f025949924d0d694eb0acae"
 dependencies = [
- "anyhow",
- "borsh",
- "bytes",
- "clap 4.4.6",
- "derive_more",
- "ethereum-types",
- "ethers",
- "ethers-contract",
- "ethers-core",
- "ethers-middleware",
- "ethers-signers",
- "hex",
- "jsonrpsee 0.18.2",
- "lazy_static",
- "reth-interfaces",
- "reth-primitives",
- "reth-revm",
- "reth-rpc-types",
- "reth-rpc-types-compat",
- "revm",
- "schemars",
- "secp256k1 0.27.0",
- "serde",
- "serde_json",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
+ "proptest",
  "thiserror",
- "tracing",
 ]
 
 [[package]]
 name = "sov-first-read-last-write-cache"
 version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
 dependencies = [
- "proptest",
  "thiserror",
 ]
 
@@ -9017,17 +9032,9 @@ dependencies = [
 ]
 
 [[package]]
-name = "sov-first-read-last-write-cache"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f#962c04faf671dc4c8f025949924d0d694eb0acae"
-dependencies = [
- "thiserror",
-]
-
-[[package]]
 name = "sov-ibc"
 version = "0.1.0"
-source = "git+https://github.com/informalsystems/sovereign-ibc?rev=bb79122#bb79122f07c66fedceab3afbd4c2f32d9ed72869"
+source = "git+https://github.com/informalsystems/sovereign-ibc?rev=650a794#650a7942c37b578470f059ac01052eb94b2c3f81"
 dependencies = [
  "anyhow",
  "borsh",
@@ -9039,16 +9046,14 @@ dependencies = [
  "schemars",
  "serde",
  "serde_json",
- "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-chain-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-modules-macros 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
+ "sov-chain-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-ibc-transfer 0.1.0 (git+https://github.com/informalsystems/sovereign-ibc?rev=650a794)",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-modules-macros 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
  "tendermint 0.33.2",
- "tendermint-proto 0.33.2",
  "thiserror",
- "uint",
 ]
 
 [[package]]
@@ -9067,13 +9072,34 @@ dependencies = [
  "serde",
  "serde_json",
  "sov-chain-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-ibc-transfer",
+ "sov-ibc-transfer 0.1.0 (git+https://github.com/informalsystems/sovereign-ibc?rev=fbd4db5)",
  "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "sov-modules-macros 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "tendermint 0.33.2",
  "thiserror",
+]
+
+[[package]]
+name = "sov-ibc-transfer"
+version = "0.1.0"
+source = "git+https://github.com/informalsystems/sovereign-ibc?rev=650a794#650a7942c37b578470f059ac01052eb94b2c3f81"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "ibc",
+ "jsonrpsee 0.18.2",
+ "prost 0.11.9",
+ "schemars",
+ "serde",
+ "serde_json",
+ "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-modules-macros 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "thiserror",
+ "uint",
 ]
 
 [[package]]
@@ -9148,6 +9174,33 @@ dependencies = [
 [[package]]
 name = "sov-modules-api"
 version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
+dependencies = [
+ "anyhow",
+ "bech32",
+ "borsh",
+ "clap 4.4.6",
+ "derive_more",
+ "ed25519-dalek 2.0.0",
+ "hex",
+ "jmt",
+ "jsonrpsee 0.18.2",
+ "rand 0.8.5",
+ "schemars",
+ "serde",
+ "serde_json",
+ "sha2 0.10.8",
+ "sov-first-read-last-write-cache 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-modules-macros 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-sequencer 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "thiserror",
+]
+
+[[package]]
+name = "sov-modules-api"
+version = "0.2.0"
 source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
 dependencies = [
  "anyhow",
@@ -9169,33 +9222,6 @@ dependencies = [
  "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "sov-sequencer 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "thiserror",
-]
-
-[[package]]
-name = "sov-modules-api"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f#962c04faf671dc4c8f025949924d0d694eb0acae"
-dependencies = [
- "anyhow",
- "bech32",
- "borsh",
- "clap 4.4.6",
- "derive_more",
- "ed25519-dalek 2.0.0",
- "hex",
- "jmt",
- "jsonrpsee 0.18.2",
- "rand 0.8.5",
- "schemars",
- "serde",
- "serde_json",
- "sha2 0.10.8",
- "sov-first-read-last-write-cache 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-modules-macros 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-sequencer 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
  "thiserror",
 ]
 
@@ -9224,7 +9250,7 @@ dependencies = [
 [[package]]
 name = "sov-modules-macros"
 version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
 dependencies = [
  "anyhow",
  "borsh",
@@ -9239,7 +9265,7 @@ dependencies = [
 [[package]]
 name = "sov-modules-macros"
 version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f#962c04faf671dc4c8f025949924d0d694eb0acae"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
 dependencies = [
  "anyhow",
  "borsh",
@@ -9274,6 +9300,23 @@ dependencies = [
 [[package]]
 name = "sov-modules-stf-template"
 version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "hex",
+ "jmt",
+ "serde",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "thiserror",
+ "tracing",
+]
+
+[[package]]
+name = "sov-modules-stf-template"
+version = "0.2.0"
 source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
 dependencies = [
  "anyhow",
@@ -9284,23 +9327,6 @@ dependencies = [
  "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "thiserror",
- "tracing",
-]
-
-[[package]]
-name = "sov-modules-stf-template"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f#962c04faf671dc4c8f025949924d0d694eb0acae"
-dependencies = [
- "anyhow",
- "borsh",
- "hex",
- "jmt",
- "serde",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
  "thiserror",
  "tracing",
 ]
@@ -9330,7 +9356,7 @@ dependencies = [
 [[package]]
 name = "sov-nft-module"
 version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
 dependencies = [
  "anyhow",
  "borsh",
@@ -9339,9 +9365,9 @@ dependencies = [
  "schemars",
  "serde",
  "serde_json",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-modules-macros 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-modules-macros 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
  "tokio",
  "tracing",
 ]
@@ -9349,7 +9375,7 @@ dependencies = [
 [[package]]
 name = "sov-nft-module"
 version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f#962c04faf671dc4c8f025949924d0d694eb0acae"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
 dependencies = [
  "anyhow",
  "borsh",
@@ -9357,9 +9383,9 @@ dependencies = [
  "schemars",
  "serde",
  "serde_json",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-modules-macros 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "sov-modules-macros 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
 ]
 
 [[package]]
@@ -9401,7 +9427,7 @@ dependencies = [
 [[package]]
 name = "sov-risc0-adapter"
 version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
 dependencies = [
  "anyhow",
  "bincode",
@@ -9411,8 +9437,8 @@ dependencies = [
  "risc0-zkvm",
  "risc0-zkvm-platform",
  "serde",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-zk-cycle-utils 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-zk-cycle-utils 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
 ]
 
 [[package]]
@@ -9438,7 +9464,7 @@ dependencies = [
 [[package]]
 name = "sov-rollup-interface"
 version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -9458,7 +9484,7 @@ dependencies = [
 [[package]]
 name = "sov-rollup-interface"
 version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f#962c04faf671dc4c8f025949924d0d694eb0acae"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -9490,7 +9516,7 @@ dependencies = [
 [[package]]
 name = "sov-schema-db"
 version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
 dependencies = [
  "anyhow",
  "once_cell",
@@ -9503,7 +9529,7 @@ dependencies = [
 [[package]]
 name = "sov-schema-db"
 version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f#962c04faf671dc4c8f025949924d0d694eb0acae"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
 dependencies = [
  "anyhow",
  "once_cell",
@@ -9531,6 +9557,20 @@ dependencies = [
 [[package]]
 name = "sov-sequencer"
 version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "hex",
+ "jsonrpsee 0.18.2",
+ "serde",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "tracing",
+]
+
+[[package]]
+name = "sov-sequencer"
+version = "0.2.0"
 source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
 dependencies = [
  "anyhow",
@@ -9539,20 +9579,6 @@ dependencies = [
  "jsonrpsee 0.18.2",
  "serde",
  "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "tracing",
-]
-
-[[package]]
-name = "sov-sequencer"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f#962c04faf671dc4c8f025949924d0d694eb0acae"
-dependencies = [
- "anyhow",
- "borsh",
- "hex",
- "jsonrpsee 0.18.2",
- "serde",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
  "tracing",
 ]
 
@@ -9582,6 +9608,23 @@ dependencies = [
 [[package]]
 name = "sov-sequencer-registry"
 version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "clap 4.4.6",
+ "jsonrpsee 0.18.2",
+ "schemars",
+ "serde",
+ "serde_json",
+ "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+]
+
+[[package]]
+name = "sov-sequencer-registry"
+version = "0.2.0"
 source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
 dependencies = [
  "anyhow",
@@ -9594,23 +9637,6 @@ dependencies = [
  "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
-]
-
-[[package]]
-name = "sov-sequencer-registry"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f#962c04faf671dc4c8f025949924d0d694eb0acae"
-dependencies = [
- "anyhow",
- "borsh",
- "clap 4.4.6",
- "jsonrpsee 0.18.2",
- "schemars",
- "serde",
- "serde_json",
- "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
 ]
 
 [[package]]
@@ -9640,6 +9666,25 @@ dependencies = [
 [[package]]
 name = "sov-state"
 version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
+dependencies = [
+ "anyhow",
+ "bcs 0.1.5",
+ "borsh",
+ "hex",
+ "jmt",
+ "serde",
+ "serde_json",
+ "sha2 0.10.8",
+ "sov-db 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-first-read-last-write-cache 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "thiserror",
+]
+
+[[package]]
+name = "sov-state"
+version = "0.2.0"
 source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
 dependencies = [
  "anyhow",
@@ -9653,25 +9698,6 @@ dependencies = [
  "sov-db 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "sov-first-read-last-write-cache 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "thiserror",
-]
-
-[[package]]
-name = "sov-state"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f#962c04faf671dc4c8f025949924d0d694eb0acae"
-dependencies = [
- "anyhow",
- "bcs 0.1.5",
- "borsh",
- "hex",
- "jmt",
- "serde",
- "serde_json",
- "sha2 0.10.8",
- "sov-db 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-first-read-last-write-cache 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
  "thiserror",
 ]
 
@@ -9705,6 +9731,26 @@ dependencies = [
 [[package]]
 name = "sov-stf-runner"
 version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "futures",
+ "hex",
+ "jsonrpsee 0.18.2",
+ "serde",
+ "sov-db 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "tokio",
+ "toml 0.8.2",
+ "tracing",
+]
+
+[[package]]
+name = "sov-stf-runner"
+version = "0.2.0"
 source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
 dependencies = [
  "anyhow",
@@ -9717,26 +9763,6 @@ dependencies = [
  "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "tokio",
- "toml 0.8.2",
- "tracing",
-]
-
-[[package]]
-name = "sov-stf-runner"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f#962c04faf671dc4c8f025949924d0d694eb0acae"
-dependencies = [
- "anyhow",
- "borsh",
- "futures",
- "hex",
- "jsonrpsee 0.18.2",
- "serde",
- "sov-db 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
  "tokio",
  "toml 0.8.2",
  "tracing",
@@ -9763,6 +9789,23 @@ dependencies = [
 [[package]]
 name = "sov-value-setter"
 version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "clap 4.4.6",
+ "jsonrpsee 0.18.2",
+ "schemars",
+ "serde",
+ "serde_json",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "thiserror",
+]
+
+[[package]]
+name = "sov-value-setter"
+version = "0.2.0"
 source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
 dependencies = [
  "anyhow",
@@ -9774,23 +9817,6 @@ dependencies = [
  "serde_json",
  "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "thiserror",
-]
-
-[[package]]
-name = "sov-value-setter"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f#962c04faf671dc4c8f025949924d0d694eb0acae"
-dependencies = [
- "anyhow",
- "borsh",
- "clap 4.4.6",
- "jsonrpsee 0.18.2",
- "schemars",
- "serde",
- "serde_json",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=962c04f)",
  "thiserror",
 ]
 
@@ -9839,7 +9865,7 @@ dependencies = [
 [[package]]
 name = "sov-zk-cycle-utils"
 version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
 dependencies = [
  "risc0-zkvm",
  "risc0-zkvm-platform",
