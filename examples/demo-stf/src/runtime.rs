@@ -10,9 +10,9 @@ use sov_chain_state::{ChainStateRpcImpl, ChainStateRpcServer};
 #[cfg(feature = "experimental")]
 use sov_evm::{EvmRpcImpl, EvmRpcServer};
 #[cfg(feature = "native")]
-use sov_ibc::applications::{TransferRpcImpl, TransferRpcServer};
-#[cfg(feature = "native")]
 use sov_ibc::{IbcRpcImpl, IbcRpcServer};
+#[cfg(feature = "native")]
+use sov_ibc_transfer::{IbcTransferRpcImpl, IbcTransferRpcServer};
 use sov_modules_api::capabilities::{BlobRefOrOwned, BlobSelector};
 #[cfg(feature = "native")]
 pub use sov_modules_api::default_context::DefaultContext;
@@ -82,7 +82,7 @@ pub struct Runtime<C: Context, Da: DaSpec> {
     pub accounts: sov_accounts::Accounts<C>,
     pub nft: sov_nft_module::NonFungibleToken<C>,
     pub ibc: sov_ibc::Ibc<C, Da>,
-    pub transfer: sov_ibc::applications::Transfer<C>,
+    pub ibc_transfer: sov_ibc_transfer::IbcTransfer<C>,
 }
 
 #[cfg(feature = "experimental")]
@@ -106,7 +106,7 @@ pub struct Runtime<C: Context, Da: DaSpec> {
     pub evm: sov_evm::Evm<C>,
     pub nft: sov_nft_module::NonFungibleToken<C>,
     pub ibc: sov_ibc::Ibc<C, Da>,
-    pub transfer: sov_ibc::applications::Transfer<C>,
+    pub ibc_transfer: sov_ibc_transfer::IbcTransfer<C>,
 }
 
 impl<C, Da> sov_modules_stf_template::Runtime<C, Da> for Runtime<C, Da>

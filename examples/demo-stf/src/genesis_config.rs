@@ -9,8 +9,8 @@ use sov_chain_state::ChainStateConfig;
 use sov_cli::wallet_state::PrivateKeyAndAddress;
 #[cfg(feature = "experimental")]
 use sov_evm::{AccountData, EvmConfig, SpecId};
-use sov_ibc::applications::TransferConfig;
 use sov_ibc::ExampleModuleConfig;
+use sov_ibc_transfer::TransferConfig;
 pub use sov_modules_api::default_context::DefaultContext;
 use sov_modules_api::Context;
 use sov_nft_module::NonFungibleTokenConfig;

@@ -30,7 +30,8 @@ sov-sequencer-registry = { git = "https://github.com/informalsystems/sovereign-s
 sov-blob-storage = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "80b76e5" }
 sov-bank = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "80b76e5" }
 sov-nft-module = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "80b76e5" }
-sov-ibc = { git = "https://github.com/informalsystems/sovereign-ibc", rev = "5d9d4b7" }
+sov-ibc = { git = "https://github.com/informalsystems/sovereign-ibc", rev = "fbd4db5" }
+sov-ibc-transfer = { git = "https://github.com/informalsystems/sovereign-ibc", rev = "fbd4db5" }
 
 sov-chain-state = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "80b76e5" }
 sov-modules-stf-template = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "80b76e5" }
@@ -59,6 +60,7 @@ native = [
     "sov-bank/native",
     "sov-nft-module/native",
     "sov-ibc/native",
+    "sov-ibc-transfer/native",
     "sov-cli",
     "sov-accounts/native",
     "sov-sequencer-registry/native",
