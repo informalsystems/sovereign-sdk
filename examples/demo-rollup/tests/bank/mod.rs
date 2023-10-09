@@ -81,7 +81,7 @@ async fn send_test_create_token_tx(rpc_address: SocketAddr) -> Result<(), anyhow
 async fn bank_tx_tests() -> Result<(), anyhow::Error> {
     let (port_tx, port_rx) = tokio::sync::oneshot::channel();
 
-    let prover = Risc0Host::new(&[]);
+    let prover = Risc0Host::new(MOCK_DA_ELF);
     let config = DemoProverConfig::Execute;
 
     let rollup_task = tokio::spawn(async {

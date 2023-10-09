@@ -1135,9 +1135,9 @@ dependencies = [
 
 [[package]]
 name = "bstr"
-version = "1.6.2"
+version = "1.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4c2f7349907b712260e64b0afe2f84692af14a454be26187d9df565c7f69266a"
+checksum = "c79ad7fb2dd38f3dabd76b09c6a5a20c038fc0213ef1e9afd30eb777f120f019"
 dependencies = [
  "memchr",
  "serde",
@@ -1270,7 +1270,7 @@ checksum = "e7daec1a2a2129eeba1644b220b4647ec537b0b5d4bfd6876fcc5a540056b592"
 dependencies = [
  "camino",
  "cargo-platform",
- "semver 1.0.19",
+ "semver 1.0.20",
  "serde",
  "serde_json",
  "thiserror",
@@ -2050,7 +2050,7 @@ dependencies = [
  "anyhow",
  "borsh",
  "clap 4.4.6",
- "demo-stf 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "demo-stf 0.2.0",
  "hex",
  "jsonrpsee 0.18.2",
  "rand 0.8.5",
@@ -2064,8 +2064,8 @@ dependencies = [
  "sov-cli 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
  "sov-data-generators 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
  "sov-evm 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-ibc 0.1.0 (git+https://github.com/informalsystems/sovereign-ibc?rev=650a794)",
- "sov-ibc-transfer 0.1.0 (git+https://github.com/informalsystems/sovereign-ibc?rev=650a794)",
+ "sov-ibc 0.1.0 (git+https://github.com/informalsystems/sovereign-ibc?rev=86b54ae)",
+ "sov-ibc-transfer 0.1.0 (git+https://github.com/informalsystems/sovereign-ibc?rev=86b54ae)",
  "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
  "sov-modules-stf-template 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
  "sov-nft-module 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
@@ -2841,7 +2841,7 @@ checksum = "0e53451ea4a8128fbce33966da71132cf9e1040dcfd2a2084fd7733ada7b2045"
 dependencies = [
  "ethers-core",
  "reqwest",
- "semver 1.0.19",
+ "semver 1.0.20",
  "serde",
  "serde_json",
  "thiserror",
@@ -2950,7 +2950,7 @@ dependencies = [
  "path-slash",
  "rayon",
  "regex",
- "semver 1.0.19",
+ "semver 1.0.20",
  "serde",
  "serde_json",
  "solang-parser",
@@ -6557,7 +6557,7 @@ checksum = "d119d7c7ca818f8a53c300863d4f87566aac09943aef5b355bb83969dae75d87"
 dependencies = [
  "aho-corasick",
  "memchr",
- "regex-automata 0.4.0",
+ "regex-automata 0.4.1",
  "regex-syntax 0.8.0",
 ]
 
@@ -6572,9 +6572,9 @@ dependencies = [
 
 [[package]]
 name = "regex-automata"
-version = "0.4.0"
+version = "0.4.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5d58da636bd923eae52b7e9120271cbefb16f399069ee566ca5ebf9c30e32238"
+checksum = "465c6fc0621e4abc4187a2bda0937bfd4f722c2730b29562e19689ea796c9a4b"
 dependencies = [
  "aho-corasick",
  "memchr",
@@ -7435,7 +7435,7 @@ version = "0.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "bfa0f585226d2e68097d4f95d113b15b83a82e819ab25717ec0590d9584ef366"
 dependencies = [
- "semver 1.0.19",
+ "semver 1.0.20",
 ]
 
 [[package]]
@@ -7875,9 +7875,9 @@ dependencies = [
 
 [[package]]
 name = "semver"
-version = "1.0.19"
+version = "1.0.20"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ad977052201c6de01a8ef2aa3378c4bd23217a056337d1d6da40468d267a4fb0"
+checksum = "836fa6a3e1e547f9a2c4040802ec865b5d85f4014efe00555d7090a3dcaa1090"
 dependencies = [
  "serde",
 ]
@@ -9034,7 +9034,7 @@ dependencies = [
 [[package]]
 name = "sov-ibc"
 version = "0.1.0"
-source = "git+https://github.com/informalsystems/sovereign-ibc?rev=650a794#650a7942c37b578470f059ac01052eb94b2c3f81"
+source = "git+https://github.com/informalsystems/sovereign-ibc?rev=86b54ae#86b54ae3e840df29742f28aa5c6c8ce76bb8e26e"
 dependencies = [
  "anyhow",
  "borsh",
@@ -9047,7 +9047,7 @@ dependencies = [
  "serde",
  "serde_json",
  "sov-chain-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-ibc-transfer 0.1.0 (git+https://github.com/informalsystems/sovereign-ibc?rev=650a794)",
+ "sov-ibc-transfer 0.1.0 (git+https://github.com/informalsystems/sovereign-ibc?rev=86b54ae)",
  "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
  "sov-modules-macros 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
  "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
@@ -9084,7 +9084,7 @@ dependencies = [
 [[package]]
 name = "sov-ibc-transfer"
 version = "0.1.0"
-source = "git+https://github.com/informalsystems/sovereign-ibc?rev=650a794#650a7942c37b578470f059ac01052eb94b2c3f81"
+source = "git+https://github.com/informalsystems/sovereign-ibc?rev=86b54ae#86b54ae3e840df29742f28aa5c6c8ce76bb8e26e"
 dependencies = [
  "anyhow",
  "borsh",
@@ -10700,7 +10700,7 @@ dependencies = [
  "hex",
  "once_cell",
  "reqwest",
- "semver 1.0.19",
+ "semver 1.0.20",
  "serde",
  "serde_json",
  "sha2 0.10.8",

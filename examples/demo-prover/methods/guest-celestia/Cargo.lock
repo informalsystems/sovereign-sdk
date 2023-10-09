@@ -2040,7 +2040,7 @@ dependencies = [
 [[package]]
 name = "sov-ibc"
 version = "0.1.0"
-source = "git+https://github.com/informalsystems/sovereign-ibc?rev=650a794#650a7942c37b578470f059ac01052eb94b2c3f81"
+source = "git+https://github.com/informalsystems/sovereign-ibc?rev=86b54ae#86b54ae3e840df29742f28aa5c6c8ce76bb8e26e"
 dependencies = [
  "anyhow",
  "borsh",
@@ -2062,7 +2062,7 @@ dependencies = [
 [[package]]
 name = "sov-ibc-transfer"
 version = "0.1.0"
-source = "git+https://github.com/informalsystems/sovereign-ibc?rev=650a794#650a7942c37b578470f059ac01052eb94b2c3f81"
+source = "git+https://github.com/informalsystems/sovereign-ibc?rev=86b54ae#86b54ae3e840df29742f28aa5c6c8ce76bb8e26e"
 dependencies = [
  "anyhow",
  "borsh",

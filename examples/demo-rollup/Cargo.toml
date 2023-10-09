@@ -20,7 +20,7 @@ sov-rollup-interface = { git = "https://github.com/informalsystems/sovereign-sdk
 sov-modules-stf-template = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191" }
 sov-modules-api = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191" }
 demo-stf = { path = "../demo-stf" }
-# methods = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191" }
+# methods = { path = "../demo-prover/methods" }
 async-trait = { workspace = true, optional = true }
 anyhow = { workspace = true, optional = true }
 borsh = { workspace = true, features = ["bytes"], optional = true }
