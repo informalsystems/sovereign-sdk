@@ -13,12 +13,12 @@ default-run = "sov-demo-rollup"
 
 [dependencies]
 # non-optional dependencies
-sov-celestia-adapter = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191" }
-const-rollup-config = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191" }
-sov-stf-runner = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191" }
-sov-rollup-interface = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191" }
-sov-modules-stf-template = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191" }
-sov-modules-api = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191" }
+sov-celestia-adapter = { path = "../../adapters/celestia" }
+const-rollup-config = { path = "../const-rollup-config" }
+sov-stf-runner = { path = "../../full-node/sov-stf-runner" }
+sov-rollup-interface = { path = "../../rollup-interface" }
+sov-modules-stf-template = { path = "../../module-system/sov-modules-stf-template" }
+sov-modules-api = { path = "../../module-system/sov-modules-api" }
 demo-stf = { path = "../demo-stf" }
 # methods = { path = "../demo-prover/methods" }
 async-trait = { workspace = true, optional = true }
@@ -35,18 +35,18 @@ tokio = { workspace = true, optional = true }
 reth-primitives = { workspace = true, optional = true }
 tracing-subscriber = { version = "0.3.17", features = ["env-filter"], optional = true }
 
-sov-db = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191", optional = true }
-sov-ethereum = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191", optional = true }
-sov-sequencer = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191", optional = true  }
-sov-risc0-adapter = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191" }
-sov-state = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191" }
-sov-cli = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191", optional = true }
+sov-db = { path = "../../full-node/db/sov-db", optional = true }
+sov-ethereum = { path = "../../full-node/sov-ethereum", optional = true }
+sov-sequencer = { path = "../../full-node/sov-sequencer", optional = true  }
+sov-risc0-adapter = { path = "../../adapters/risc0" }
+sov-state = { path = "../../module-system/sov-state" }
+sov-cli = { path = "../../module-system/sov-cli", optional = true }
 clap = { workspace = true, optional = true}
 
 
 [dev-dependencies]
-sov-evm = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191", features = ["smart_contracts"] }
-sov-bank = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191", features = ["native"] }
+sov-evm = { path = "../../module-system/module-implementations/sov-evm", features = ["smart_contracts"] }
+sov-bank = { path = "../../module-system/module-implementations/sov-bank", features = ["native"] }
 borsh = { workspace = true }
 sha2 = { workspace = true }
 hex = { workspace = true }
@@ -55,7 +55,7 @@ reqwest = "0.11"
 tendermint = "0.32"
 tempfile = { workspace = true }
 proptest = { workspace = true }
-sov-rollup-interface = { git = "https://github.com/informalsystems/sovereign-sdk.git", rev = "10a6191", features = ["fuzzing"] }
+sov-rollup-interface = { path = "../../rollup-interface", features = ["fuzzing"] }
 tokio = { workspace = true }
 sov-demo-rollup = { path = ".", features = ["native"] }
 prometheus = "0.11.0"
