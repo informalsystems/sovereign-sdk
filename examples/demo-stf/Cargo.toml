@@ -32,8 +32,8 @@ sov-bank = { path = "../../module-system/module-implementations/sov-bank" }
 sov-nft-module = { path = "../../module-system/module-implementations/sov-nft-module" }
 sov-chain-state = { path = "../../module-system/module-implementations/sov-chain-state" }
 
-sov-ibc = { git = "https://github.com/informalsystems/sovereign-ibc", rev = "86b54ae" }
-sov-ibc-transfer = { git = "https://github.com/informalsystems/sovereign-ibc", rev = "86b54ae" }
+sov-ibc = { git = "https://github.com/informalsystems/sovereign-ibc", branch = "farhad/update-sov-deps" }
+sov-ibc-transfer = { git = "https://github.com/informalsystems/sovereign-ibc", branch = "farhad/update-sov-deps" }
 
 sov-modules-stf-template = { path = "../../module-system/sov-modules-stf-template" }
 sov-value-setter = { path = "../../module-system/module-implementations/examples/sov-value-setter" }
