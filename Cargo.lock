@@ -8361,7 +8361,7 @@ dependencies = [
 [[package]]
 name = "sov-bank"
 version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?branch=farhad/ibc-demo-rollup#68ec86b8433f52b6efa75f0b8d0af76542188636"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?branch=farhad/ibc-demo-rollup#3ee4b6727ed0994a5997c4f203100f5dfd3d4ab2"
 dependencies = [
  "anyhow",
  "borsh",
@@ -8454,7 +8454,7 @@ dependencies = [
 [[package]]
 name = "sov-chain-state"
 version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?branch=farhad/ibc-demo-rollup#68ec86b8433f52b6efa75f0b8d0af76542188636"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?branch=farhad/ibc-demo-rollup#3ee4b6727ed0994a5997c4f203100f5dfd3d4ab2"
 dependencies = [
  "anyhow",
  "borsh",
@@ -8522,7 +8522,7 @@ dependencies = [
 [[package]]
 name = "sov-db"
 version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?branch=farhad/ibc-demo-rollup#68ec86b8433f52b6efa75f0b8d0af76542188636"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?branch=farhad/ibc-demo-rollup#3ee4b6727ed0994a5997c4f203100f5dfd3d4ab2"
 dependencies = [
  "anyhow",
  "bincode",
@@ -8690,7 +8690,7 @@ dependencies = [
 [[package]]
 name = "sov-first-read-last-write-cache"
 version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?branch=farhad/ibc-demo-rollup#68ec86b8433f52b6efa75f0b8d0af76542188636"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?branch=farhad/ibc-demo-rollup#3ee4b6727ed0994a5997c4f203100f5dfd3d4ab2"
 dependencies = [
  "thiserror",
 ]
@@ -8792,7 +8792,7 @@ dependencies = [
 [[package]]
 name = "sov-modules-api"
 version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?branch=farhad/ibc-demo-rollup#68ec86b8433f52b6efa75f0b8d0af76542188636"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?branch=farhad/ibc-demo-rollup#3ee4b6727ed0994a5997c4f203100f5dfd3d4ab2"
 dependencies = [
  "anyhow",
  "bech32",
@@ -8841,7 +8841,7 @@ dependencies = [
 [[package]]
 name = "sov-modules-macros"
 version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?branch=farhad/ibc-demo-rollup#68ec86b8433f52b6efa75f0b8d0af76542188636"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?branch=farhad/ibc-demo-rollup#3ee4b6727ed0994a5997c4f203100f5dfd3d4ab2"
 dependencies = [
  "anyhow",
  "borsh",
@@ -8954,7 +8954,7 @@ dependencies = [
 [[package]]
 name = "sov-rollup-interface"
 version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?branch=farhad/ibc-demo-rollup#68ec86b8433f52b6efa75f0b8d0af76542188636"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?branch=farhad/ibc-demo-rollup#3ee4b6727ed0994a5997c4f203100f5dfd3d4ab2"
 dependencies = [
  "anyhow",
  "async-trait",
@@ -8986,7 +8986,7 @@ dependencies = [
 [[package]]
 name = "sov-schema-db"
 version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?branch=farhad/ibc-demo-rollup#68ec86b8433f52b6efa75f0b8d0af76542188636"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?branch=farhad/ibc-demo-rollup#3ee4b6727ed0994a5997c4f203100f5dfd3d4ab2"
 dependencies = [
  "anyhow",
  "once_cell",
@@ -9014,7 +9014,7 @@ dependencies = [
 [[package]]
 name = "sov-sequencer"
 version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?branch=farhad/ibc-demo-rollup#68ec86b8433f52b6efa75f0b8d0af76542188636"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?branch=farhad/ibc-demo-rollup#3ee4b6727ed0994a5997c4f203100f5dfd3d4ab2"
 dependencies = [
  "anyhow",
  "borsh",
@@ -9075,7 +9075,7 @@ dependencies = [
 [[package]]
 name = "sov-state"
 version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?branch=farhad/ibc-demo-rollup#68ec86b8433f52b6efa75f0b8d0af76542188636"
+source = "git+https://github.com/informalsystems/sovereign-sdk.git?branch=farhad/ibc-demo-rollup#3ee4b6727ed0994a5997c4f203100f5dfd3d4ab2"
 dependencies = [
  "anyhow",
  "bcs 0.1.5",
