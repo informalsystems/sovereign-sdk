@@ -244,9 +244,9 @@ checksum = "a4668cab20f66d8d020e1fbc0ebe47217433c1b6c8f2040faf858554e394ace6"
 
 [[package]]
 name = "arbitrary"
-version = "1.3.0"
+version = "1.3.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e2d098ff73c1ca148721f37baad5ea6a465a13f9573aba8641fbbbae8164a54e"
+checksum = "a2e1373abdaa212b704512ec2bd8b26bd0b7d5c3f70117411a5d9a451383c859"
 dependencies = [
  "derive_arbitrary",
 ]
@@ -573,51 +573,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "axum"
-version = "0.6.20"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3b829e4e32b91e643de6eafe82b1d90675f5874230191a4ffbc1b336dec4d6bf"
-dependencies = [
- "async-trait",
- "axum-core",
- "bitflags 1.3.2",
- "bytes",
- "futures-util",
- "http",
- "http-body",
- "hyper",
- "itoa",
- "matchit",
- "memchr",
- "mime",
- "percent-encoding",
- "pin-project-lite",
- "rustversion",
- "serde",
- "sync_wrapper",
- "tower",
- "tower-layer",
- "tower-service",
-]
-
-[[package]]
-name = "axum-core"
-version = "0.3.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "759fa577a247914fd3f7f76d62972792636412fbfd634cd452f6a385a74d2d2c"
-dependencies = [
- "async-trait",
- "bytes",
- "futures-util",
- "http",
- "http-body",
- "mime",
- "rustversion",
- "tower-layer",
- "tower-service",
-]
-
-[[package]]
 name = "backtrace"
 version = "0.3.69"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -631,6 +586,12 @@ dependencies = [
  "object 0.32.1",
  "rustc-demangle",
 ]
+
+[[package]]
+name = "base-x"
+version = "0.2.11"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4cbbc9d0964165b47557570cce6c952866c2678457aca742aafc9fb771d30270"
 
 [[package]]
 name = "base16ct"
@@ -691,9 +652,9 @@ dependencies = [
 
 [[package]]
 name = "bcs"
-version = "0.1.5"
+version = "0.1.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4bd3ffe8b19a604421a5d461d4a70346223e535903fbc3067138bddbebddcf77"
+checksum = "85b6598a2f5d564fb7855dc6b06fd1c38cff5a72bd8b863a4d021938497b440a"
 dependencies = [
  "serde",
  "thiserror",
@@ -1014,7 +975,7 @@ dependencies = [
  "proc-macro2 1.0.69",
  "quote 1.0.33",
  "syn 2.0.38",
- "synstructure",
+ "synstructure 0.13.0",
 ]
 
 [[package]]
@@ -1107,9 +1068,9 @@ dependencies = [
 
 [[package]]
 name = "bounded-collections"
-version = "0.1.8"
+version = "0.1.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "eb5b05133427c07c4776906f673ccf36c21b102c9829c641a5b56bd151d44fd6"
+checksum = "ca548b6163b872067dc5eb82fd130c56881435e30367d2073594a3d9744120dd"
 dependencies = [
  "log",
  "parity-scale-codec",
@@ -1131,16 +1092,6 @@ checksum = "f5353f36341f7451062466f0b755b96ac3a9547e4d7f6b70d603fc721a7d7896"
 dependencies = [
  "sha2 0.10.8",
  "tinyvec",
-]
-
-[[package]]
-name = "bstr"
-version = "1.7.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c79ad7fb2dd38f3dabd76b09c6a5a20c038fc0213ef1e9afd30eb777f120f019"
-dependencies = [
- "memchr",
- "serde",
 ]
 
 [[package]]
@@ -1234,7 +1185,7 @@ dependencies = [
 [[package]]
 name = "c-kzg"
 version = "0.1.0"
-source = "git+https://github.com/ethereum/c-kzg-4844#a1d03803059471948e518820afa8518643e1b638"
+source = "git+https://github.com/ethereum/c-kzg-4844#f3fffecd1ce7e8b6620cd5bac50c660efc20e48c"
 dependencies = [
  "bindgen 0.66.1",
  "blst",
@@ -1293,6 +1244,53 @@ dependencies = [
 ]
 
 [[package]]
+name = "celestia-proto"
+version = "0.1.0"
+source = "git+https://github.com/eigerco/celestia-node-rs.git?rev=1fa61eb#1fa61ebd6be6a3663f12e61cf23618342e3a910f"
+dependencies = [
+ "anyhow",
+ "prost 0.12.1",
+ "prost-build",
+ "prost-types 0.12.1",
+ "serde",
+ "tendermint-proto 0.32.0",
+]
+
+[[package]]
+name = "celestia-rpc"
+version = "0.1.0"
+source = "git+https://github.com/eigerco/celestia-node-rs.git?rev=1fa61eb#1fa61ebd6be6a3663f12e61cf23618342e3a910f"
+dependencies = [
+ "celestia-types",
+ "http",
+ "jsonrpsee 0.20.2",
+ "serde",
+ "thiserror",
+ "tracing",
+]
+
+[[package]]
+name = "celestia-types"
+version = "0.1.0"
+source = "git+https://github.com/eigerco/celestia-node-rs.git?rev=1fa61eb#1fa61ebd6be6a3663f12e61cf23618342e3a910f"
+dependencies = [
+ "base64 0.21.4",
+ "bech32",
+ "bytes",
+ "celestia-proto",
+ "cid",
+ "const_format",
+ "enum_dispatch",
+ "nmt-rs",
+ "ruint",
+ "serde",
+ "sha2 0.10.8",
+ "tendermint 0.32.0",
+ "tendermint-proto 0.32.0",
+ "thiserror",
+]
+
+[[package]]
 name = "cexpr"
 version = "0.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1347,6 +1345,19 @@ checksum = "defaa24ecc093c77630e6c15e17c51f5e187bf35ee514f4e2d67baaa96dae22b"
 dependencies = [
  "ciborium-io",
  "half",
+]
+
+[[package]]
+name = "cid"
+version = "0.10.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fd94671561e36e4e7de75f753f577edafb0e7c05d6e4547229fdf7938fbcd2c3"
+dependencies = [
+ "core2",
+ "multibase",
+ "multihash",
+ "serde",
+ "unsigned-varint",
 ]
 
 [[package]]
@@ -1543,9 +1554,24 @@ name = "const-rollup-config"
 version = "0.2.0"
 
 [[package]]
-name = "const-rollup-config"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
+name = "const_format"
+version = "0.2.32"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e3a214c7af3d04997541b18d432afaff4c455e79e2029079647e72fc2bd27673"
+dependencies = [
+ "const_format_proc_macros",
+]
+
+[[package]]
+name = "const_format_proc_macros"
+version = "0.2.32"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c7f6ff08fd20f4f299298a28e2dfa8a8ba1036e6cd2460ac1de7b425d76f2500"
+dependencies = [
+ "proc-macro2 1.0.69",
+ "quote 1.0.33",
+ "unicode-xid 0.2.4",
+]
 
 [[package]]
 name = "constant_time_eq"
@@ -1589,6 +1615,15 @@ name = "core-foundation-sys"
 version = "0.8.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e496a50fda8aacccc86d7529e2c1e0892dbd0f898a6b5645b5561b89c3210efa"
+
+[[package]]
+name = "core2"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b49ba7ef1ad6107f8824dbe97de947cbaac53c44e7f9756a1fba0d37c1eec505"
+dependencies = [
+ "memchr",
+]
 
 [[package]]
 name = "cpp_demangle"
@@ -2004,6 +2039,26 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c2e66c9d817f1720209181c316d28635c050fa304f9c79e47a520882661b7308"
 
 [[package]]
+name = "data-encoding-macro"
+version = "0.1.13"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c904b33cc60130e1aeea4956ab803d08a3f4a0ca82d64ed757afac3891f2bb99"
+dependencies = [
+ "data-encoding",
+ "data-encoding-macro-internal",
+]
+
+[[package]]
+name = "data-encoding-macro-internal"
+version = "0.1.11"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8fdf3fce3ce863539ec1d7fd1b6dcc3c645663376b43ed376bbf887733e4f772"
+dependencies = [
+ "data-encoding",
+ "syn 1.0.109",
+]
+
+[[package]]
 name = "deadpool"
 version = "0.9.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2040,7 +2095,7 @@ dependencies = [
  "hex",
  "serde",
  "sha2 0.10.8",
- "sov-rollup-interface 0.2.0",
+ "sov-rollup-interface",
 ]
 
 [[package]]
@@ -2050,67 +2105,31 @@ dependencies = [
  "anyhow",
  "borsh",
  "clap 4.4.6",
- "demo-stf 0.2.0",
+ "demo-stf",
  "hex",
- "jsonrpsee 0.18.2",
+ "jsonrpsee 0.20.2",
  "rand 0.8.5",
  "reth-primitives",
  "serde",
  "serde_json",
- "sov-accounts 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-blob-storage 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-chain-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-cli 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-data-generators 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-evm 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-ibc 0.1.0 (git+https://github.com/informalsystems/sovereign-ibc?rev=86b54ae)",
- "sov-ibc-transfer 0.1.0 (git+https://github.com/informalsystems/sovereign-ibc?rev=86b54ae)",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-modules-stf-template 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-nft-module 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-sequencer 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-sequencer-registry 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-stf-runner 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-value-setter 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "simple-nft-module",
+ "sov-accounts",
+ "sov-bank",
+ "sov-blob-storage",
+ "sov-chain-state",
+ "sov-cli",
+ "sov-data-generators",
+ "sov-evm",
+ "sov-modules-api",
+ "sov-modules-stf-template",
+ "sov-nft-module",
+ "sov-rollup-interface",
+ "sov-sequencer",
+ "sov-sequencer-registry",
+ "sov-state",
+ "sov-stf-runner",
+ "sov-value-setter",
  "tempfile",
- "tokio",
- "toml 0.8.2",
- "tracing",
-]
-
-[[package]]
-name = "demo-stf"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
-dependencies = [
- "anyhow",
- "borsh",
- "clap 4.4.6",
- "hex",
- "jsonrpsee 0.18.2",
- "reth-primitives",
- "serde",
- "serde_json",
- "sov-accounts 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-blob-storage 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-chain-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-cli 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-evm 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-ibc 0.1.0 (git+https://github.com/informalsystems/sovereign-ibc?rev=fbd4db5)",
- "sov-ibc-transfer 0.1.0 (git+https://github.com/informalsystems/sovereign-ibc?rev=fbd4db5)",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-modules-stf-template 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-nft-module 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-sequencer 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-sequencer-registry 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-stf-runner 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-value-setter 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "tokio",
  "toml 0.8.2",
  "tracing",
@@ -2128,10 +2147,11 @@ dependencies = [
 
 [[package]]
 name = "deranged"
-version = "0.3.8"
+version = "0.3.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f2696e8a945f658fd14dc3b87242e6b80cd0f36ff04ea560fa39082368847946"
+checksum = "0f32d04922c60427da6f9fef14d042d9edddef64cb9d4ce0d64d0685fbeb1fd3"
 dependencies = [
+ "powerfmt",
  "serde",
 ]
 
@@ -2592,6 +2612,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "enum_dispatch"
+version = "0.3.12"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8f33313078bb8d4d05a2733a94ac4c2d8a0df9a2b84424ebf4f33bfc224a890e"
+dependencies = [
+ "once_cell",
+ "proc-macro2 1.0.69",
+ "quote 1.0.33",
+ "syn 2.0.38",
+]
+
+[[package]]
 name = "enumn"
 version = "0.1.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2600,19 +2632,6 @@ dependencies = [
  "proc-macro2 1.0.69",
  "quote 1.0.33",
  "syn 2.0.38",
-]
-
-[[package]]
-name = "env_logger"
-version = "0.10.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "85cdab6a89accf66733ad5a1693a4dcced6aeff64602b634530dd73c1f3ee9f0"
-dependencies = [
- "humantime",
- "is-terminal",
- "log",
- "regex",
- "termcolor",
 ]
 
 [[package]]
@@ -3084,9 +3103,9 @@ checksum = "0ce7134b9999ecaf8bcd65542e436736ef32ddca1b3e06094cb6ec5755203b80"
 
 [[package]]
 name = "flate2"
-version = "1.0.27"
+version = "1.0.28"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c6c98ee8095e9d1dcbf2fcc6d95acccb90d1c81db1e44725c6a984b1dbdfb010"
+checksum = "46303f565772937ffe1d394a4fac6f411c6013172fadde9dcdb1e147a086940e"
 dependencies = [
  "crc32fast",
  "miniz_oxide",
@@ -3372,19 +3391,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d2fabcfbdc87f4758337ca535fb41a6d701b65693ce38287d856d1674551ec9b"
 
 [[package]]
-name = "globset"
-version = "0.4.13"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "759c97c1e17c55525b57192c06a267cda0ac5210b222d6b82189a2338fa1c13d"
-dependencies = [
- "aho-corasick",
- "bstr",
- "fnv",
- "log",
- "regex",
-]
-
-[[package]]
 name = "gloo-net"
 version = "0.2.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3393,7 +3399,28 @@ dependencies = [
  "futures-channel",
  "futures-core",
  "futures-sink",
- "gloo-utils",
+ "gloo-utils 0.1.7",
+ "js-sys",
+ "pin-project",
+ "serde",
+ "serde_json",
+ "thiserror",
+ "wasm-bindgen",
+ "wasm-bindgen-futures",
+ "web-sys",
+]
+
+[[package]]
+name = "gloo-net"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "8ac9e8288ae2c632fa9f8657ac70bfe38a1530f345282d7ba66a1f70b72b7dc4"
+dependencies = [
+ "futures-channel",
+ "futures-core",
+ "futures-sink",
+ "gloo-utils 0.2.0",
+ "http",
  "js-sys",
  "pin-project",
  "serde",
@@ -3430,6 +3457,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "gloo-utils"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0b5555354113b18c547c1d3a98fbf7fb32a9ff4f6fa112ce823a21641a0ba3aa"
+dependencies = [
+ "js-sys",
+ "serde",
+ "serde_json",
+ "wasm-bindgen",
+ "web-sys",
+]
+
+[[package]]
 name = "group"
 version = "0.13.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3438,26 +3478,6 @@ dependencies = [
  "ff",
  "rand_core 0.6.4",
  "subtle",
-]
-
-[[package]]
-name = "gumdrop"
-version = "0.8.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5bc700f989d2f6f0248546222d9b4258f5b02a171a431f8285a81c08142629e3"
-dependencies = [
- "gumdrop_derive",
-]
-
-[[package]]
-name = "gumdrop_derive"
-version = "0.8.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "729f9bd3449d77e7831a18abfb7ba2f99ee813dfd15b8c2167c9a54ba20aa99d"
-dependencies = [
- "proc-macro2 1.0.69",
- "quote 1.0.33",
- "syn 1.0.109",
 ]
 
 [[package]]
@@ -3805,18 +3825,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "hyper-timeout"
-version = "0.4.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bbb958482e8c7be4bc3cf272a766a2b0bf1a6755e7a6ae777f017a31d11b13b1"
-dependencies = [
- "hyper",
- "pin-project-lite",
- "tokio",
- "tokio-io-timeout",
-]
-
-[[package]]
 name = "hyper-tls"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3850,77 +3858,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f31827a206f56af32e590ba56d5d2d085f558508192593743f16b2306495269f"
 dependencies = [
  "cc",
-]
-
-[[package]]
-name = "ibc"
-version = "0.45.0"
-source = "git+https://github.com/cosmos/ibc-rs?rev=bc09e28#bc09e286147a29ae95511d4e04d13d85129420b9"
-dependencies = [
- "borsh",
- "bytes",
- "derive_more",
- "displaydoc",
- "ibc-derive",
- "ibc-proto",
- "ics23",
- "num-traits",
- "parking_lot 0.12.1",
- "primitive-types",
- "prost 0.11.9",
- "schemars",
- "serde",
- "serde_derive",
- "serde_json",
- "sha2 0.10.8",
- "subtle-encoding",
- "tendermint 0.33.2",
- "tendermint-light-client-verifier",
- "tendermint-proto 0.33.2",
- "tendermint-testgen",
- "time",
- "tracing",
- "uint",
-]
-
-[[package]]
-name = "ibc-derive"
-version = "0.3.0"
-source = "git+https://github.com/cosmos/ibc-rs?rev=bc09e28#bc09e286147a29ae95511d4e04d13d85129420b9"
-dependencies = [
- "darling 0.20.3",
- "proc-macro2 1.0.69",
- "quote 1.0.33",
- "syn 2.0.38",
-]
-
-[[package]]
-name = "ibc-proto"
-version = "0.35.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "459ccbab879b749bf500ae13244593fa16fc64c1b3159f6b0753c169625a1e23"
-dependencies = [
- "base64 0.21.4",
- "borsh",
- "bytes",
- "flex-error",
- "ics23",
- "prost 0.11.9",
- "serde",
- "subtle-encoding",
- "tendermint-proto 0.33.2",
- "tonic",
-]
-
-[[package]]
-name = "ibc-query"
-version = "0.45.0"
-source = "git+https://github.com/cosmos/ibc-rs?rev=bc09e28#bc09e286147a29ae95511d4e04d13d85129420b9"
-dependencies = [
- "displaydoc",
- "ibc",
- "ibc-proto",
- "tonic",
 ]
 
 [[package]]
@@ -4217,14 +4154,14 @@ dependencies = [
  "anyhow",
  "borsh",
  "serde",
- "sov-chain-state 0.2.0",
- "sov-data-generators 0.2.0",
- "sov-modules-api 0.2.0",
- "sov-modules-stf-template 0.2.0",
- "sov-rollup-interface 0.2.0",
- "sov-schema-db 0.2.0",
- "sov-state 0.2.0",
- "sov-value-setter 0.2.0",
+ "sov-chain-state",
+ "sov-data-generators",
+ "sov-modules-api",
+ "sov-modules-stf-template",
+ "sov-rollup-interface",
+ "sov-schema-db",
+ "sov-state",
+ "sov-value-setter",
  "tempfile",
 ]
 
@@ -4258,7 +4195,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cb0889898416213fab133e1d33a0e5858a48177452750691bde3666d0fdbaf8b"
 dependencies = [
  "hermit-abi 0.3.3",
- "rustix 0.38.18",
+ "rustix 0.38.19",
  "windows-sys 0.48.0",
 ]
 
@@ -4288,8 +4225,9 @@ checksum = "af150ab688ff2122fcef229be89cb50dd66af9e01a4ff320cc137eecc9bacc38"
 
 [[package]]
 name = "jmt"
-version = "0.7.0"
-source = "git+https://github.com/penumbra-zone/jmt.git?rev=199ae1c185e74ee2133db773efacff56706085aa#199ae1c185e74ee2133db773efacff56706085aa"
+version = "0.8.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "23f1cb339f7d5288603665c0ccbef7ad33a782ced36e18b6b207f175479eb3b7"
 dependencies = [
  "anyhow",
  "borsh",
@@ -4309,9 +4247,9 @@ dependencies = [
 
 [[package]]
 name = "jobserver"
-version = "0.1.26"
+version = "0.1.27"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "936cfd212a0155903bcbc060e316fb6cc7cbf2e1907329391ebadc1fe0ce77c2"
+checksum = "8c37f63953c4c63420ed5fd3d6d398c719489b9f872b9fa683262f8edd363c7d"
 dependencies = [
  "libc",
 ]
@@ -4343,18 +4281,19 @@ dependencies = [
 
 [[package]]
 name = "jsonrpsee"
-version = "0.18.2"
+version = "0.20.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1822d18e4384a5e79d94dc9e4d1239cfa9fad24e55b44d2efeff5b394c9fece4"
+checksum = "de902baa44bf34a58b1a4906f8b840d7d60dcec5f41fe08b4dbc14cf9efa821c"
 dependencies = [
- "jsonrpsee-client-transport 0.18.2",
- "jsonrpsee-core 0.18.2",
- "jsonrpsee-http-client 0.18.2",
- "jsonrpsee-proc-macros 0.18.2",
+ "jsonrpsee-client-transport 0.20.2",
+ "jsonrpsee-core 0.20.2",
+ "jsonrpsee-http-client 0.20.2",
+ "jsonrpsee-proc-macros 0.20.2",
  "jsonrpsee-server",
- "jsonrpsee-types 0.18.2",
- "jsonrpsee-wasm-client 0.18.2",
- "jsonrpsee-ws-client 0.18.2",
+ "jsonrpsee-types 0.20.2",
+ "jsonrpsee-wasm-client 0.20.2",
+ "jsonrpsee-ws-client 0.20.2",
+ "tokio",
  "tracing",
 ]
 
@@ -4368,7 +4307,7 @@ dependencies = [
  "futures-channel",
  "futures-timer",
  "futures-util",
- "gloo-net",
+ "gloo-net 0.2.6",
  "http",
  "jsonrpsee-core 0.16.3",
  "jsonrpsee-types 0.16.3",
@@ -4385,15 +4324,15 @@ dependencies = [
 
 [[package]]
 name = "jsonrpsee-client-transport"
-version = "0.18.2"
+version = "0.20.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "11aa5766d5c430b89cb26a99b88f3245eb91534be8126102cea9e45ee3891b22"
+checksum = "58d9851f8f5653e0433a898e9032bde4910b35d625bd9dcf33ef6e36e7c3d456"
 dependencies = [
  "futures-channel",
  "futures-util",
- "gloo-net",
+ "gloo-net 0.4.0",
  "http",
- "jsonrpsee-core 0.18.2",
+ "jsonrpsee-core 0.20.2",
  "pin-project",
  "rustls-native-certs",
  "soketto",
@@ -4402,7 +4341,8 @@ dependencies = [
  "tokio-rustls",
  "tokio-util",
  "tracing",
- "webpki-roots 0.23.1",
+ "url",
+ "webpki-roots 0.25.2",
 ]
 
 [[package]]
@@ -4431,9 +4371,9 @@ dependencies = [
 
 [[package]]
 name = "jsonrpsee-core"
-version = "0.18.2"
+version = "0.20.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "64c6832a55f662b5a6ecc844db24b8b9c387453f923de863062c60ce33d62b81"
+checksum = "51f45d37af23707750136379f6799e76ebfcf2d425ec4e36d0deb7921da5e65c"
 dependencies = [
  "anyhow",
  "async-lock",
@@ -4441,9 +4381,8 @@ dependencies = [
  "beef",
  "futures-timer",
  "futures-util",
- "globset",
  "hyper",
- "jsonrpsee-types 0.18.2",
+ "jsonrpsee-types 0.20.2",
  "parking_lot 0.12.1",
  "rand 0.8.5",
  "rustc-hash",
@@ -4452,7 +4391,6 @@ dependencies = [
  "soketto",
  "thiserror",
  "tokio",
- "tokio-stream",
  "tracing",
  "wasm-bindgen-futures",
 ]
@@ -4478,21 +4416,22 @@ dependencies = [
 
 [[package]]
 name = "jsonrpsee-http-client"
-version = "0.18.2"
+version = "0.20.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1705c65069729e3dccff6fd91ee431d5d31cabcf00ce68a62a2c6435ac713af9"
+checksum = "02308562f2e8162a32f8d6c3dc19c29c858d5d478047c886a5c3c25b5f7fa868"
 dependencies = [
  "async-trait",
  "hyper",
  "hyper-rustls",
- "jsonrpsee-core 0.18.2",
- "jsonrpsee-types 0.18.2",
+ "jsonrpsee-core 0.20.2",
+ "jsonrpsee-types 0.20.2",
  "serde",
  "serde_json",
  "thiserror",
  "tokio",
  "tower",
  "tracing",
+ "url",
 ]
 
 [[package]]
@@ -4502,7 +4441,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "44e8ab85614a08792b9bff6c8feee23be78c98d0182d4c622c05256ab553892a"
 dependencies = [
  "heck 0.4.1",
- "proc-macro-crate 1.3.1",
+ "proc-macro-crate 1.1.3",
  "proc-macro2 1.0.69",
  "quote 1.0.33",
  "syn 1.0.109",
@@ -4510,12 +4449,12 @@ dependencies = [
 
 [[package]]
 name = "jsonrpsee-proc-macros"
-version = "0.18.2"
+version = "0.20.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c6027ac0b197ce9543097d02a290f550ce1d9432bf301524b013053c0b75cc94"
+checksum = "f26b3675a943d083d0bf6e367ec755dccec56c41888afa13b191c1c4ff87c652"
 dependencies = [
  "heck 0.4.1",
- "proc-macro-crate 1.3.1",
+ "proc-macro-crate 1.1.3",
  "proc-macro2 1.0.69",
  "quote 1.0.33",
  "syn 1.0.109",
@@ -4523,17 +4462,20 @@ dependencies = [
 
 [[package]]
 name = "jsonrpsee-server"
-version = "0.18.2"
+version = "0.20.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4f06661d1a6b6e5b85469dc9c29acfbb9b3bb613797a6fd10a3ebb8a70754057"
+checksum = "2ed2bec9c76cee118c27138cc1c877938bcaa01207a5d902b80dbfc60466bc9c"
 dependencies = [
  "futures-util",
+ "http",
  "hyper",
- "jsonrpsee-core 0.18.2",
- "jsonrpsee-types 0.18.2",
+ "jsonrpsee-core 0.20.2",
+ "jsonrpsee-types 0.20.2",
+ "route-recognizer",
  "serde",
  "serde_json",
  "soketto",
+ "thiserror",
  "tokio",
  "tokio-stream",
  "tokio-util",
@@ -4557,23 +4499,9 @@ dependencies = [
 
 [[package]]
 name = "jsonrpsee-types"
-version = "0.18.2"
+version = "0.20.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6e5bf6c75ce2a4217421154adfc65a24d2b46e77286e59bba5d9fa6544ccc8f4"
-dependencies = [
- "anyhow",
- "beef",
- "serde",
- "serde_json",
- "thiserror",
- "tracing",
-]
-
-[[package]]
-name = "jsonrpsee-types"
-version = "0.20.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fa9e25aec855b2a7d3ed90fded6c41e8c3fb72b63f071e1be3f0004eba19b625"
+checksum = "05eaff23af19f10ba6fbb76519bed6da4d3b9bbaef13d39b7c2b6c14e532d27e"
 dependencies = [
  "anyhow",
  "beef",
@@ -4596,13 +4524,13 @@ dependencies = [
 
 [[package]]
 name = "jsonrpsee-wasm-client"
-version = "0.18.2"
+version = "0.20.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "34e6ea7c6d862e60f8baebd946c037b70c6808a4e4e31e792a4029184e3ce13a"
+checksum = "d7ae1c71afe02a21713e197438f1bcfaa171c3dfe533b9505a0990cb8297779e"
 dependencies = [
- "jsonrpsee-client-transport 0.18.2",
- "jsonrpsee-core 0.18.2",
- "jsonrpsee-types 0.18.2",
+ "jsonrpsee-client-transport 0.20.2",
+ "jsonrpsee-core 0.20.2",
+ "jsonrpsee-types 0.20.2",
 ]
 
 [[package]]
@@ -4619,14 +4547,15 @@ dependencies = [
 
 [[package]]
 name = "jsonrpsee-ws-client"
-version = "0.18.2"
+version = "0.20.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a64b2589680ba1ad7863f279cd2d5083c1dc0a7c0ea959d22924553050f8ab9f"
+checksum = "cd34d3ab8c09f02fd4c432f256bc8b143b616b222b03050f941ee53f0e8d7b24"
 dependencies = [
  "http",
- "jsonrpsee-client-transport 0.18.2",
- "jsonrpsee-core 0.18.2",
- "jsonrpsee-types 0.18.2",
+ "jsonrpsee-client-transport 0.20.2",
+ "jsonrpsee-core 0.20.2",
+ "jsonrpsee-types 0.20.2",
+ "url",
 ]
 
 [[package]]
@@ -4966,12 +4895,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2532096657941c2fea9c289d370a250971c689d4f143798ff67113ec042024a5"
 
 [[package]]
-name = "matchit"
-version = "0.7.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0e7465ac9959cc2b1404e8e2367b43684a6d13790fe23056cc8c6c5a6b7bcb94"
-
-[[package]]
 name = "matrixmultiply"
 version = "0.3.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5009,7 +4932,7 @@ version = "0.6.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b2cffa4ad52c6f791f4f8b15f0c05f9824b2ced1160e88cc393d64fff9a8ac64"
 dependencies = [
- "rustix 0.38.18",
+ "rustix 0.38.19",
 ]
 
 [[package]]
@@ -5058,13 +4981,6 @@ dependencies = [
  "keccak",
  "rand_core 0.5.1",
  "zeroize",
-]
-
-[[package]]
-name = "methods"
-version = "0.2.0"
-dependencies = [
- "risc0-build",
 ]
 
 [[package]]
@@ -5158,10 +5074,10 @@ dependencies = [
  "schemars",
  "serde",
  "serde_json",
- "sov-bank 0.2.0",
- "sov-modules-api 0.2.0",
- "sov-rollup-interface 0.2.0",
- "sov-state 0.2.0",
+ "sov-bank",
+ "sov-modules-api",
+ "sov-rollup-interface",
+ "sov-state",
  "tempfile",
  "thiserror",
 ]
@@ -5171,6 +5087,42 @@ name = "more-asserts"
 version = "0.2.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7843ec2de400bcbc6a6328c958dc38e5359da6e93e72e37bc5246bf1ae776389"
+
+[[package]]
+name = "multibase"
+version = "0.9.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "9b3539ec3c1f04ac9748a260728e855f261b4977f5c3406612c884564f329404"
+dependencies = [
+ "base-x",
+ "data-encoding",
+ "data-encoding-macro",
+]
+
+[[package]]
+name = "multihash"
+version = "0.18.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "cfd8a792c1694c6da4f68db0a9d707c72bd260994da179e6030a5dcee00bb815"
+dependencies = [
+ "core2",
+ "multihash-derive",
+ "unsigned-varint",
+]
+
+[[package]]
+name = "multihash-derive"
+version = "0.8.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1d6d4752e6230d8ef7adf7bd5d8c4b1f6561c1014c5ba9a37445ccefe18aa1db"
+dependencies = [
+ "proc-macro-crate 1.1.3",
+ "proc-macro-error",
+ "proc-macro2 1.0.69",
+ "quote 1.0.33",
+ "syn 1.0.109",
+ "synstructure 0.12.6",
+]
 
 [[package]]
 name = "multimap"
@@ -5217,19 +5169,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e4a24736216ec316047a1fc4252e27dabb04218aa4a3f37c6e7ddbf1f9782b54"
 
 [[package]]
-name = "nft-utils"
-version = "0.2.0"
-dependencies = [
- "borsh",
- "demo-stf 0.2.0",
- "sov-modules-api 0.2.0",
- "sov-nft-module 0.2.0",
- "sov-rollup-interface 0.2.0",
- "sov-sequencer 0.2.0",
- "tokio",
-]
-
-[[package]]
 name = "nibble_vec"
 version = "0.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5241,7 +5180,7 @@ dependencies = [
 [[package]]
 name = "nmt-rs"
 version = "0.1.0"
-source = "git+https://github.com/Sovereign-Labs/nmt-rs.git?rev=dd37588444fca72825d11fe4a46838f66525c49f#dd37588444fca72825d11fe4a46838f66525c49f"
+source = "git+https://github.com/Sovereign-Labs/nmt-rs.git?rev=d821332#d821332baa03aea625d23060dc239af57b9121f5"
 dependencies = [
  "borsh",
  "bytes",
@@ -5445,7 +5384,7 @@ version = "0.5.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "dcbff9bc912032c62bf65ef1d5aea88983b420f4f839db1e9b0c281a25c9c799"
 dependencies = [
- "proc-macro-crate 1.3.1",
+ "proc-macro-crate 1.1.3",
  "proc-macro2 1.0.69",
  "quote 1.0.33",
  "syn 1.0.109",
@@ -5457,7 +5396,7 @@ version = "0.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "96667db765a921f7b295ffee8b60472b686a51d4f21c2ee4ffdb94c7013b65a6"
 dependencies = [
- "proc-macro-crate 1.3.1",
+ "proc-macro-crate 1.1.3",
  "proc-macro2 1.0.69",
  "quote 1.0.33",
  "syn 2.0.38",
@@ -5469,7 +5408,7 @@ version = "0.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "56ea360eafe1022f7cc56cd7b869ed57330fb2453d0c7831d99b74c65d2f5597"
 dependencies = [
- "proc-macro-crate 1.3.1",
+ "proc-macro-crate 1.1.3",
  "proc-macro2 1.0.69",
  "quote 1.0.33",
  "syn 2.0.38",
@@ -5621,9 +5560,9 @@ checksum = "04744f49eae99ab78e0d5c0b603ab218f515ea8cfe5a456d7629ad883a3b6e7d"
 
 [[package]]
 name = "ordered-float"
-version = "2.10.0"
+version = "2.10.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7940cf2ca942593318d07fcf2596cdca60a85c9e7fab408a5e21a4f9dcd40d87"
+checksum = "68f19d67e5a2795c94e73e0bb1cc1a7edeb2e28efd39e2e1c9b7a40c1108b11c"
 dependencies = [
  "num-traits",
 ]
@@ -5665,7 +5604,7 @@ version = "3.6.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "312270ee71e1cd70289dacf597cab7b207aa107d2f28191c2ae45b2ece18a260"
 dependencies = [
- "proc-macro-crate 1.3.1",
+ "proc-macro-crate 1.1.3",
  "proc-macro2 1.0.69",
  "quote 1.0.33",
  "syn 1.0.109",
@@ -6053,6 +5992,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "powerfmt"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "439ee305def115ba05938db6eb1644ff94165c5ab5e9420d1c1bcedbba909391"
+
+[[package]]
 name = "ppv-lite86"
 version = "0.2.17"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -6090,9 +6035,9 @@ dependencies = [
 
 [[package]]
 name = "primitive-types"
-version = "0.12.1"
+version = "0.12.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9f3486ccba82358b11a77516035647c34ba167dfa53312630de83b12bd4f3d66"
+checksum = "0b34d9fd68ae0b74a41b21c03c2f62847aa0ffea044eee893b4c140b37e244e2"
 dependencies = [
  "fixed-hash",
  "impl-codec",
@@ -6113,12 +6058,12 @@ dependencies = [
 
 [[package]]
 name = "proc-macro-crate"
-version = "1.3.1"
+version = "1.1.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7f4c021e1093a56626774e81216a4ce732a735e5bad4868a03f3ed65ca0c3919"
+checksum = "e17d47ce914bf4de440332250b0edd23ce48c005f59fab39d3335866b114f11a"
 dependencies = [
- "once_cell",
- "toml_edit 0.19.15",
+ "thiserror",
+ "toml 0.5.11",
 ]
 
 [[package]]
@@ -6558,7 +6503,7 @@ dependencies = [
  "aho-corasick",
  "memchr",
  "regex-automata 0.4.1",
- "regex-syntax 0.8.0",
+ "regex-syntax 0.8.1",
 ]
 
 [[package]]
@@ -6578,7 +6523,7 @@ checksum = "465c6fc0621e4abc4187a2bda0937bfd4f722c2730b29562e19689ea796c9a4b"
 dependencies = [
  "aho-corasick",
  "memchr",
- "regex-syntax 0.8.0",
+ "regex-syntax 0.8.1",
 ]
 
 [[package]]
@@ -6595,9 +6540,9 @@ checksum = "dbb5fb1acd8a1a18b3dd5be62d25485eb770e05afb408a9627d14d451bae12da"
 
 [[package]]
 name = "regex-syntax"
-version = "0.8.0"
+version = "0.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c3cbb081b9784b07cceb8824c8583f86db4814d172ab043f3c23f7dc600bf83d"
+checksum = "56d84fdd47036b038fc80dd333d10b6aab10d5d31f4a366e20014def75328d33"
 
 [[package]]
 name = "regress"
@@ -7032,7 +6977,7 @@ version = "0.1.0-alpha.8"
 source = "git+https://github.com/paradigmxyz/reth?rev=e83d3aa#e83d3aa704f87825ca8cab6f593ab4d4adbf6792"
 dependencies = [
  "itertools 0.11.0",
- "jsonrpsee-types 0.20.1",
+ "jsonrpsee-types 0.20.2",
  "reth-primitives",
  "reth-rlp",
  "serde",
@@ -7161,6 +7106,13 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "bd124222d17ad93a644ed9d011a40f4fb64aa54275c08cc216524a9ea82fb09f"
 dependencies = [
  "digest 0.10.7",
+]
+
+[[package]]
+name = "risc0"
+version = "0.2.0"
+dependencies = [
+ "risc0-build",
 ]
 
 [[package]]
@@ -7364,6 +7316,41 @@ dependencies = [
 ]
 
 [[package]]
+name = "rollup-template"
+version = "0.2.0"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "clap 4.4.6",
+ "jsonrpsee 0.20.2",
+ "serde",
+ "serde_json",
+ "sov-accounts",
+ "sov-bank",
+ "sov-db",
+ "sov-modules-api",
+ "sov-modules-stf-template",
+ "sov-risc0-adapter",
+ "sov-rollup-interface",
+ "sov-sequencer",
+ "sov-sequencer-registry",
+ "sov-state",
+ "sov-stf-runner",
+ "tempfile",
+ "template-risc0",
+ "template-stf",
+ "tokio",
+ "tracing",
+ "tracing-subscriber 0.3.17",
+]
+
+[[package]]
+name = "route-recognizer"
+version = "0.3.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "afab94fb28594581f62d981211a9a4d53cc8130bbcbbb89a0440d9b8e81a7746"
+
+[[package]]
 name = "rrs-lib"
 version = "0.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -7440,9 +7427,9 @@ dependencies = [
 
 [[package]]
 name = "rustix"
-version = "0.36.15"
+version = "0.36.16"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c37f1bd5ef1b5422177b7646cba67430579cfe2ace80f284fee876bca52ad941"
+checksum = "6da3636faa25820d8648e0e31c5d519bbb01f72fdf57131f0f5f7da5fed36eab"
 dependencies = [
  "bitflags 1.3.2",
  "errno",
@@ -7454,9 +7441,9 @@ dependencies = [
 
 [[package]]
 name = "rustix"
-version = "0.38.18"
+version = "0.38.19"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5a74ee2d7c2581cd139b42447d7d9389b889bdaad3a73f1ebb16f2a3237bb19c"
+checksum = "745ecfa778e66b2b63c88a61cb36e0eea109e803b0b86bf9879fbc77c70e86ed"
 dependencies = [
  "bitflags 2.4.0",
  "errno",
@@ -7610,7 +7597,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4391f0dfbb6690f035f6d2a15d6a12f88cc5395c36bcc056db07ffa2a90870ec"
 dependencies = [
  "darling 0.14.4",
- "proc-macro-crate 1.3.1",
+ "proc-macro-crate 1.1.3",
  "proc-macro2 1.0.69",
  "quote 1.0.33",
  "syn 1.0.109",
@@ -7638,7 +7625,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "316e0fb10ec0fee266822bd641bab5e332a4ab80ef8c5b5ff35e5401a394f5a6"
 dependencies = [
  "darling 0.14.4",
- "proc-macro-crate 1.3.1",
+ "proc-macro-crate 1.1.3",
  "proc-macro2 1.0.69",
  "quote 1.0.33",
  "syn 1.0.109",
@@ -7664,7 +7651,7 @@ version = "2.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "912e55f6d20e0e80d63733872b40e1227c0bce1e1ab81ba67d696339bfd7fd29"
 dependencies = [
- "proc-macro-crate 1.3.1",
+ "proc-macro-crate 1.1.3",
  "proc-macro2 1.0.69",
  "quote 1.0.33",
  "syn 1.0.109",
@@ -7905,9 +7892,9 @@ checksum = "cd0b0ec5f1c1ca621c432a25813d8d60c88abe6d3e08a3eb9cf37d97a0fe3d73"
 
 [[package]]
 name = "serde"
-version = "1.0.188"
+version = "1.0.189"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cf9e0fcba69a370eed61bcf2b728575f726b50b55cba78064753d708ddc7549e"
+checksum = "8e422a44e74ad4001bdc8eede9a4570ab52f71190e9c076d14369f38b9200537"
 dependencies = [
  "serde_derive",
 ]
@@ -7944,9 +7931,9 @@ dependencies = [
 
 [[package]]
 name = "serde_derive"
-version = "1.0.188"
+version = "1.0.189"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4eca7ac642d82aa35b60049a6eccb4be6be75e599bd2e9adb5f875a737654af2"
+checksum = "1e48d1f918009ce3145511378cf68d613e3b3d9137d67272562080d68a2b32d5"
 dependencies = [
  "proc-macro2 1.0.69",
  "quote 1.0.33",
@@ -8176,23 +8163,20 @@ dependencies = [
 ]
 
 [[package]]
-name = "simple-error"
-version = "0.2.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cc47a29ce97772ca5c927f75bac34866b16d64e07f330c3248e2d7226623901b"
-
-[[package]]
 name = "simple-nft-module"
 version = "0.2.0"
 dependencies = [
  "anyhow",
  "borsh",
- "jsonrpsee 0.18.2",
+ "clap 4.4.6",
+ "jsonrpsee 0.20.2",
+ "schemars",
  "serde",
+ "serde_json",
  "simple-nft-module",
- "sov-modules-api 0.2.0",
- "sov-rollup-interface 0.2.0",
- "sov-state 0.2.0",
+ "sov-modules-api",
+ "sov-rollup-interface",
+ "sov-state",
  "tempfile",
 ]
 
@@ -8308,10 +8292,10 @@ name = "sov-accessory-state"
 version = "0.2.0"
 dependencies = [
  "borsh",
- "jsonrpsee 0.18.2",
+ "jsonrpsee 0.20.2",
  "serde",
- "sov-modules-api 0.2.0",
- "sov-state 0.2.0",
+ "sov-modules-api",
+ "sov-state",
  "tempfile",
 ]
 
@@ -8323,48 +8307,16 @@ dependencies = [
  "arbitrary",
  "borsh",
  "clap 4.4.6",
- "jsonrpsee 0.18.2",
+ "jsonrpsee 0.20.2",
+ "proptest",
+ "proptest-derive",
  "schemars",
  "serde",
  "serde_json",
- "sov-accounts 0.2.0",
- "sov-modules-api 0.2.0",
- "sov-state 0.2.0",
+ "sov-accounts",
+ "sov-modules-api",
+ "sov-state",
  "tempfile",
- "thiserror",
-]
-
-[[package]]
-name = "sov-accounts"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
-dependencies = [
- "anyhow",
- "borsh",
- "clap 4.4.6",
- "jsonrpsee 0.18.2",
- "schemars",
- "serde",
- "serde_json",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "thiserror",
-]
-
-[[package]]
-name = "sov-accounts"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
-dependencies = [
- "anyhow",
- "borsh",
- "clap 4.4.6",
- "jsonrpsee 0.18.2",
- "schemars",
- "serde",
- "serde_json",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "thiserror",
 ]
 
@@ -8379,11 +8331,11 @@ dependencies = [
  "serde",
  "serde_json",
  "sov-attester-incentives",
- "sov-bank 0.2.0",
- "sov-chain-state 0.2.0",
- "sov-modules-api 0.2.0",
- "sov-rollup-interface 0.2.0",
- "sov-state 0.2.0",
+ "sov-bank",
+ "sov-chain-state",
+ "sov-modules-api",
+ "sov-rollup-interface",
+ "sov-state",
  "tempfile",
  "thiserror",
 ]
@@ -8402,9 +8354,9 @@ dependencies = [
  "reqwest",
  "serde",
  "serde_json",
- "sov-rollup-interface 0.2.0",
+ "sov-rollup-interface",
  "sp-core 21.0.0",
- "sp-core-hashing 10.0.0",
+ "sp-core-hashing 12.0.0",
  "sp-keyring",
  "subxt",
  "thiserror",
@@ -8420,55 +8372,19 @@ dependencies = [
  "anyhow",
  "borsh",
  "clap 4.4.6",
- "jsonrpsee 0.18.2",
+ "jsonrpsee 0.20.2",
  "schemars",
  "serde",
  "serde_json",
- "sov-bank 0.2.0",
- "sov-modules-api 0.2.0",
- "sov-rollup-interface 0.2.0",
- "sov-state 0.2.0",
+ "sov-bank",
+ "sov-modules-api",
+ "sov-rollup-interface",
+ "sov-state",
  "tempfile",
  "thiserror",
 ]
 
 [[package]]
-name = "sov-bank"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
-dependencies = [
- "anyhow",
- "borsh",
- "clap 4.4.6",
- "jsonrpsee 0.18.2",
- "schemars",
- "serde",
- "serde_json",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "thiserror",
-]
-
-[[package]]
-name = "sov-bank"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
-dependencies = [
- "anyhow",
- "borsh",
- "clap 4.4.6",
- "jsonrpsee 0.18.2",
- "schemars",
- "serde",
- "serde_json",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "thiserror",
-]
-
-[[package]]
 name = "sov-blob-storage"
 version = "0.2.0"
 dependencies = [
@@ -8477,58 +8393,18 @@ dependencies = [
  "borsh",
  "clap 4.4.6",
  "hex",
- "jsonrpsee 0.18.2",
+ "jsonrpsee 0.20.2",
  "schemars",
  "serde",
  "serde_json",
- "sov-bank 0.2.0",
- "sov-blob-storage 0.2.0",
- "sov-chain-state 0.2.0",
- "sov-modules-api 0.2.0",
- "sov-rollup-interface 0.2.0",
- "sov-sequencer-registry 0.2.0",
- "sov-state 0.2.0",
+ "sov-bank",
+ "sov-blob-storage",
+ "sov-chain-state",
+ "sov-modules-api",
+ "sov-rollup-interface",
+ "sov-sequencer-registry",
+ "sov-state",
  "tempfile",
- "tracing",
-]
-
-[[package]]
-name = "sov-blob-storage"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
-dependencies = [
- "anyhow",
- "bincode",
- "borsh",
- "hex",
- "jsonrpsee 0.18.2",
- "schemars",
- "serde",
- "serde_json",
- "sov-chain-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-sequencer-registry 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "tracing",
-]
-
-[[package]]
-name = "sov-blob-storage"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
-dependencies = [
- "anyhow",
- "bincode",
- "borsh",
- "hex",
- "jsonrpsee 0.18.2",
- "schemars",
- "serde",
- "serde_json",
- "sov-chain-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-sequencer-registry 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "tracing",
 ]
 
@@ -8541,25 +8417,25 @@ dependencies = [
  "base64 0.21.4",
  "bech32",
  "borsh",
+ "celestia-proto",
+ "celestia-rpc",
+ "celestia-types",
  "hex",
- "hex-literal",
- "jsonrpsee 0.18.2",
+ "jsonrpsee 0.20.2",
  "nmt-rs",
  "postcard",
  "proptest",
- "prost 0.11.9",
- "prost-build",
- "prost-types 0.11.9",
+ "prost 0.12.1",
  "risc0-zkvm",
  "risc0-zkvm-platform",
  "serde",
  "serde_json",
  "sha2 0.10.8",
- "sov-celestia-adapter 0.2.0",
- "sov-rollup-interface 0.2.0",
+ "sov-celestia-adapter",
+ "sov-rollup-interface",
  "sov-zk-cycle-macros",
- "tendermint 0.32.2",
- "tendermint-proto 0.32.2",
+ "tendermint 0.32.0",
+ "tendermint-proto 0.32.0",
  "thiserror",
  "tokio",
  "tracing",
@@ -8567,131 +8443,39 @@ dependencies = [
 ]
 
 [[package]]
-name = "sov-celestia-adapter"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
-dependencies = [
- "anyhow",
- "async-trait",
- "base64 0.21.4",
- "bech32",
- "borsh",
- "hex",
- "hex-literal",
- "jsonrpsee 0.18.2",
- "nmt-rs",
- "prost 0.11.9",
- "prost-build",
- "prost-types 0.11.9",
- "serde",
- "serde_json",
- "sha2 0.10.8",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "tendermint 0.32.2",
- "tendermint-proto 0.32.2",
- "thiserror",
- "tokio",
- "tracing",
-]
-
-[[package]]
 name = "sov-chain-state"
 version = "0.2.0"
 dependencies = [
  "anyhow",
  "borsh",
- "jsonrpsee 0.18.2",
+ "jsonrpsee 0.20.2",
  "serde",
  "serde_json",
- "sov-chain-state 0.2.0",
- "sov-data-generators 0.2.0",
- "sov-modules-api 0.2.0",
- "sov-rollup-interface 0.2.0",
- "sov-state 0.2.0",
- "tempfile",
-]
-
-[[package]]
-name = "sov-chain-state"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
-dependencies = [
- "anyhow",
- "borsh",
- "jsonrpsee 0.18.2",
- "serde",
- "serde_json",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
-]
-
-[[package]]
-name = "sov-chain-state"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
-dependencies = [
- "anyhow",
- "borsh",
- "jsonrpsee 0.18.2",
- "serde",
- "serde_json",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
-]
-
-[[package]]
-name = "sov-cli"
-version = "0.2.0"
-dependencies = [
- "anyhow",
- "borsh",
- "demo-stf 0.2.0",
- "directories",
- "hex",
- "jsonrpsee 0.18.2",
- "serde",
- "serde_json",
- "sov-accounts 0.2.0",
- "sov-bank 0.2.0",
- "sov-modules-api 0.2.0",
- "sov-rollup-interface 0.2.0",
+ "sov-chain-state",
+ "sov-data-generators",
+ "sov-modules-api",
+ "sov-rollup-interface",
+ "sov-state",
  "tempfile",
 ]
 
 [[package]]
 name = "sov-cli"
 version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
 dependencies = [
  "anyhow",
  "borsh",
+ "demo-stf",
  "directories",
  "hex",
- "jsonrpsee 0.18.2",
+ "jsonrpsee 0.20.2",
  "serde",
  "serde_json",
- "sov-accounts 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
-]
-
-[[package]]
-name = "sov-cli"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
-dependencies = [
- "anyhow",
- "borsh",
- "directories",
- "hex",
- "jsonrpsee 0.18.2",
- "serde",
- "serde_json",
- "sov-accounts 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "sov-accounts",
+ "sov-bank",
+ "sov-modules-api",
+ "sov-rollup-interface",
+ "tempfile",
 ]
 
 [[package]]
@@ -8700,26 +8484,12 @@ version = "0.2.0"
 dependencies = [
  "borsh",
  "proptest",
- "sov-bank 0.2.0",
- "sov-modules-api 0.2.0",
- "sov-modules-stf-template 0.2.0",
- "sov-rollup-interface 0.2.0",
- "sov-state 0.2.0",
- "sov-value-setter 0.2.0",
-]
-
-[[package]]
-name = "sov-data-generators"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
-dependencies = [
- "borsh",
- "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-modules-stf-template 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-value-setter 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-bank",
+ "sov-modules-api",
+ "sov-modules-stf-template",
+ "sov-rollup-interface",
+ "sov-state",
+ "sov-value-setter",
 ]
 
 [[package]]
@@ -8736,81 +8506,10 @@ dependencies = [
  "proptest-derive",
  "rocksdb",
  "serde",
- "sov-rollup-interface 0.2.0",
- "sov-schema-db 0.2.0",
+ "sov-rollup-interface",
+ "sov-schema-db",
  "tempfile",
  "tokio",
-]
-
-[[package]]
-name = "sov-db"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
-dependencies = [
- "anyhow",
- "bincode",
- "borsh",
- "byteorder",
- "jmt",
- "rocksdb",
- "serde",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-schema-db 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "tokio",
-]
-
-[[package]]
-name = "sov-db"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
-dependencies = [
- "anyhow",
- "bincode",
- "borsh",
- "byteorder",
- "jmt",
- "rocksdb",
- "serde",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-schema-db 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "tokio",
-]
-
-[[package]]
-name = "sov-demo-prover-host"
-version = "0.2.0"
-dependencies = [
- "anyhow",
- "bincode",
- "borsh",
- "const-rollup-config 0.2.0",
- "demo-stf 0.2.0",
- "env_logger",
- "hex",
- "jsonrpsee 0.18.2",
- "log",
- "log4rs",
- "methods",
- "once_cell",
- "parking_lot 0.12.1",
- "prettytable-rs",
- "regex",
- "risc0-zkvm",
- "serde",
- "serde_json",
- "sha2 0.10.8",
- "sov-celestia-adapter 0.2.0",
- "sov-demo-rollup",
- "sov-modules-api 0.2.0",
- "sov-risc0-adapter 0.2.0",
- "sov-rollup-interface 0.2.0",
- "sov-state 0.2.0",
- "sov-stf-runner 0.2.0",
- "sov-zk-cycle-macros",
- "tempfile",
- "tokio",
- "tracing",
- "tracing-subscriber 0.3.17",
 ]
 
 [[package]]
@@ -8819,11 +8518,12 @@ version = "0.2.0"
 dependencies = [
  "anyhow",
  "async-trait",
+ "bincode",
  "borsh",
  "clap 4.4.6",
- "const-rollup-config 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "const-rollup-config",
  "criterion",
- "demo-stf 0.2.0",
+ "demo-stf",
  "ethereum-types",
  "ethers",
  "ethers-contract",
@@ -8832,31 +8532,36 @@ dependencies = [
  "ethers-providers",
  "ethers-signers",
  "hex",
- "jsonrpsee 0.18.2",
+ "jsonrpsee 0.20.2",
+ "log",
+ "log4rs",
  "prettytable-rs",
  "prometheus 0.11.0",
  "proptest",
+ "regex",
  "reqwest",
  "reth-primitives",
  "revm",
+ "risc0",
  "secp256k1 0.27.0",
  "serde",
  "serde_json",
  "sha2 0.10.8",
- "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-celestia-adapter 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-cli 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-db 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-demo-rollup",
- "sov-ethereum 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-evm 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-modules-stf-template 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-risc0-adapter 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-sequencer 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-stf-runner 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-bank",
+ "sov-celestia-adapter",
+ "sov-cli",
+ "sov-db",
+ "sov-ethereum",
+ "sov-evm",
+ "sov-modules-api",
+ "sov-modules-stf-template",
+ "sov-nft-module",
+ "sov-risc0-adapter",
+ "sov-rollup-interface",
+ "sov-sequencer",
+ "sov-state",
+ "sov-stf-runner",
+ "sov-zk-cycle-macros",
  "tempfile",
  "tendermint 0.32.2",
  "tokio",
@@ -8870,34 +8575,16 @@ version = "0.2.0"
 dependencies = [
  "anyhow",
  "borsh",
- "demo-stf 0.2.0",
+ "demo-stf",
  "ethers",
- "jsonrpsee 0.18.2",
+ "jsonrpsee 0.20.2",
  "reth-primitives",
  "reth-rpc-types",
  "serde_json",
- "sov-evm 0.2.0",
- "sov-modules-api 0.2.0",
- "sov-rollup-interface 0.2.0",
+ "sov-evm",
+ "sov-modules-api",
+ "sov-rollup-interface",
  "tokio",
-]
-
-[[package]]
-name = "sov-ethereum"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
-dependencies = [
- "anyhow",
- "borsh",
- "demo-stf 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "ethers",
- "jsonrpsee 0.18.2",
- "reth-primitives",
- "reth-rpc-types",
- "serde_json",
- "sov-evm 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
 ]
 
 [[package]]
@@ -8916,7 +8603,7 @@ dependencies = [
  "ethers-middleware",
  "ethers-signers",
  "hex",
- "jsonrpsee 0.18.2",
+ "jsonrpsee 0.20.2",
  "lazy_static",
  "reth-interfaces",
  "reth-primitives",
@@ -8928,82 +8615,12 @@ dependencies = [
  "secp256k1 0.27.0",
  "serde",
  "serde_json",
- "sov-evm 0.2.0",
- "sov-modules-api 0.2.0",
- "sov-state 0.2.0",
+ "sov-evm",
+ "sov-modules-api",
+ "sov-state",
  "tempfile",
  "thiserror",
  "tokio",
- "tracing",
-]
-
-[[package]]
-name = "sov-evm"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
-dependencies = [
- "anyhow",
- "borsh",
- "bytes",
- "clap 4.4.6",
- "derive_more",
- "ethereum-types",
- "ethers",
- "ethers-contract",
- "ethers-core",
- "ethers-middleware",
- "ethers-signers",
- "hex",
- "jsonrpsee 0.18.2",
- "lazy_static",
- "reth-interfaces",
- "reth-primitives",
- "reth-revm",
- "reth-rpc-types",
- "reth-rpc-types-compat",
- "revm",
- "schemars",
- "secp256k1 0.27.0",
- "serde",
- "serde_json",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "thiserror",
- "tracing",
-]
-
-[[package]]
-name = "sov-evm"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
-dependencies = [
- "anyhow",
- "borsh",
- "bytes",
- "clap 4.4.6",
- "derive_more",
- "ethereum-types",
- "ethers",
- "ethers-contract",
- "ethers-core",
- "ethers-middleware",
- "ethers-signers",
- "hex",
- "jsonrpsee 0.18.2",
- "lazy_static",
- "reth-interfaces",
- "reth-primitives",
- "reth-revm",
- "reth-rpc-types",
- "reth-rpc-types-compat",
- "revm",
- "schemars",
- "secp256k1 0.27.0",
- "serde",
- "serde_json",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "thiserror",
  "tracing",
 ]
 
@@ -9016,125 +8633,17 @@ dependencies = [
 ]
 
 [[package]]
-name = "sov-first-read-last-write-cache"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
-dependencies = [
- "thiserror",
-]
-
-[[package]]
-name = "sov-first-read-last-write-cache"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
-dependencies = [
- "thiserror",
-]
-
-[[package]]
-name = "sov-ibc"
-version = "0.1.0"
-source = "git+https://github.com/informalsystems/sovereign-ibc?rev=86b54ae#86b54ae3e840df29742f28aa5c6c8ce76bb8e26e"
-dependencies = [
- "anyhow",
- "borsh",
- "derive_more",
- "ibc",
- "ibc-query",
- "jsonrpsee 0.18.2",
- "prost 0.11.9",
- "schemars",
- "serde",
- "serde_json",
- "sov-chain-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-ibc-transfer 0.1.0 (git+https://github.com/informalsystems/sovereign-ibc?rev=86b54ae)",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-modules-macros 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "tendermint 0.33.2",
- "thiserror",
-]
-
-[[package]]
-name = "sov-ibc"
-version = "0.1.0"
-source = "git+https://github.com/informalsystems/sovereign-ibc?rev=fbd4db5#fbd4db5615ea931dbc065e43dace4da99b4df081"
-dependencies = [
- "anyhow",
- "borsh",
- "derive_more",
- "ibc",
- "ibc-query",
- "jsonrpsee 0.18.2",
- "prost 0.11.9",
- "schemars",
- "serde",
- "serde_json",
- "sov-chain-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-ibc-transfer 0.1.0 (git+https://github.com/informalsystems/sovereign-ibc?rev=fbd4db5)",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-modules-macros 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "tendermint 0.33.2",
- "thiserror",
-]
-
-[[package]]
-name = "sov-ibc-transfer"
-version = "0.1.0"
-source = "git+https://github.com/informalsystems/sovereign-ibc?rev=86b54ae#86b54ae3e840df29742f28aa5c6c8ce76bb8e26e"
-dependencies = [
- "anyhow",
- "borsh",
- "ibc",
- "jsonrpsee 0.18.2",
- "prost 0.11.9",
- "schemars",
- "serde",
- "serde_json",
- "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-modules-macros 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "thiserror",
- "uint",
-]
-
-[[package]]
-name = "sov-ibc-transfer"
-version = "0.1.0"
-source = "git+https://github.com/informalsystems/sovereign-ibc?rev=fbd4db5#fbd4db5615ea931dbc065e43dace4da99b4df081"
-dependencies = [
- "anyhow",
- "borsh",
- "ibc",
- "jsonrpsee 0.18.2",
- "prost 0.11.9",
- "schemars",
- "serde",
- "serde_json",
- "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-modules-macros 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "thiserror",
- "uint",
-]
-
-[[package]]
 name = "sov-module-schemas"
 version = "0.2.0"
 dependencies = [
- "sov-accounts 0.2.0",
- "sov-bank 0.2.0",
- "sov-evm 0.2.0",
- "sov-modules-api 0.2.0",
+ "sov-accounts",
+ "sov-bank",
+ "sov-evm",
+ "sov-modules-api",
  "sov-prover-incentives",
- "sov-rollup-interface 0.2.0",
- "sov-sequencer-registry 0.2.0",
- "sov-value-setter 0.2.0",
+ "sov-rollup-interface",
+ "sov-sequencer-registry",
+ "sov-value-setter",
 ]
 
 [[package]]
@@ -9151,7 +8660,9 @@ dependencies = [
  "ed25519-dalek 2.0.0",
  "hex",
  "jmt",
- "jsonrpsee 0.18.2",
+ "jsonrpsee 0.20.2",
+ "proptest",
+ "proptest-derive",
  "rand 0.8.5",
  "risc0-zkvm",
  "risc0-zkvm-platform",
@@ -9159,69 +8670,14 @@ dependencies = [
  "serde",
  "serde_json",
  "sha2 0.10.8",
- "sov-bank 0.2.0",
- "sov-first-read-last-write-cache 0.2.0",
- "sov-modules-api 0.2.0",
- "sov-modules-macros 0.2.0",
- "sov-rollup-interface 0.2.0",
- "sov-sequencer 0.2.0",
- "sov-state 0.2.0",
+ "sov-bank",
+ "sov-first-read-last-write-cache",
+ "sov-modules-api",
+ "sov-modules-macros",
+ "sov-rollup-interface",
+ "sov-state",
  "sov-zk-cycle-macros",
  "tempfile",
- "thiserror",
-]
-
-[[package]]
-name = "sov-modules-api"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
-dependencies = [
- "anyhow",
- "bech32",
- "borsh",
- "clap 4.4.6",
- "derive_more",
- "ed25519-dalek 2.0.0",
- "hex",
- "jmt",
- "jsonrpsee 0.18.2",
- "rand 0.8.5",
- "schemars",
- "serde",
- "serde_json",
- "sha2 0.10.8",
- "sov-first-read-last-write-cache 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-modules-macros 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-sequencer 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "thiserror",
-]
-
-[[package]]
-name = "sov-modules-api"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
-dependencies = [
- "anyhow",
- "bech32",
- "borsh",
- "clap 4.4.6",
- "derive_more",
- "ed25519-dalek 2.0.0",
- "hex",
- "jmt",
- "jsonrpsee 0.18.2",
- "rand 0.8.5",
- "schemars",
- "serde",
- "serde_json",
- "sha2 0.10.8",
- "sov-first-read-last-write-cache 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-modules-macros 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-sequencer 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "thiserror",
 ]
 
@@ -9232,52 +8688,22 @@ dependencies = [
  "anyhow",
  "borsh",
  "clap 4.4.6",
- "jsonrpsee 0.18.2",
+ "jsonrpsee 0.20.2",
  "proc-macro2 1.0.69",
  "quote 1.0.33",
  "schemars",
  "serde",
  "serde_json",
- "sov-bank 0.2.0",
- "sov-modules-api 0.2.0",
- "sov-modules-macros 0.2.0",
- "sov-state 0.2.0",
+ "sov-bank",
+ "sov-modules-api",
+ "sov-modules-macros",
+ "sov-state",
  "syn 1.0.109",
  "tempfile",
  "trybuild",
 ]
 
 [[package]]
-name = "sov-modules-macros"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
-dependencies = [
- "anyhow",
- "borsh",
- "jsonrpsee 0.18.2",
- "proc-macro2 1.0.69",
- "quote 1.0.33",
- "schemars",
- "serde_json",
- "syn 1.0.109",
-]
-
-[[package]]
-name = "sov-modules-macros"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
-dependencies = [
- "anyhow",
- "borsh",
- "jsonrpsee 0.18.2",
- "proc-macro2 1.0.69",
- "quote 1.0.33",
- "schemars",
- "serde_json",
- "syn 1.0.109",
-]
-
-[[package]]
 name = "sov-modules-stf-template"
 version = "0.2.0"
 dependencies = [
@@ -9288,45 +8714,11 @@ dependencies = [
  "risc0-zkvm",
  "risc0-zkvm-platform",
  "serde",
- "sov-modules-api 0.2.0",
- "sov-rollup-interface 0.2.0",
- "sov-state 0.2.0",
+ "sov-modules-api",
+ "sov-rollup-interface",
+ "sov-state",
  "sov-zk-cycle-macros",
- "sov-zk-cycle-utils 0.2.0",
- "thiserror",
- "tracing",
-]
-
-[[package]]
-name = "sov-modules-stf-template"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
-dependencies = [
- "anyhow",
- "borsh",
- "hex",
- "jmt",
- "serde",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "thiserror",
- "tracing",
-]
-
-[[package]]
-name = "sov-modules-stf-template"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
-dependencies = [
- "anyhow",
- "borsh",
- "hex",
- "jmt",
- "serde",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
+ "sov-zk-cycle-utils",
  "thiserror",
  "tracing",
 ]
@@ -9337,55 +8729,20 @@ version = "0.2.0"
 dependencies = [
  "anyhow",
  "borsh",
- "jsonrpsee 0.18.2",
+ "jsonrpsee 0.20.2",
  "postgres",
  "schemars",
  "serde",
  "serde_json",
- "sov-data-generators 0.2.0",
- "sov-modules-api 0.2.0",
- "sov-modules-macros 0.2.0",
- "sov-nft-module 0.2.0",
- "sov-rollup-interface 0.2.0",
- "sov-state 0.2.0",
+ "sov-data-generators",
+ "sov-modules-api",
+ "sov-modules-macros",
+ "sov-nft-module",
+ "sov-rollup-interface",
+ "sov-state",
  "tempfile",
  "tokio",
  "tracing",
-]
-
-[[package]]
-name = "sov-nft-module"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
-dependencies = [
- "anyhow",
- "borsh",
- "jsonrpsee 0.18.2",
- "postgres",
- "schemars",
- "serde",
- "serde_json",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-modules-macros 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "tokio",
- "tracing",
-]
-
-[[package]]
-name = "sov-nft-module"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
-dependencies = [
- "anyhow",
- "borsh",
- "jsonrpsee 0.18.2",
- "schemars",
- "serde",
- "serde_json",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-modules-macros 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
 ]
 
 [[package]]
@@ -9398,11 +8755,11 @@ dependencies = [
  "schemars",
  "serde",
  "serde_json",
- "sov-bank 0.2.0",
- "sov-modules-api 0.2.0",
+ "sov-bank",
+ "sov-modules-api",
  "sov-prover-incentives",
- "sov-rollup-interface 0.2.0",
- "sov-state 0.2.0",
+ "sov-rollup-interface",
+ "sov-state",
  "tempfile",
 ]
 
@@ -9420,25 +8777,8 @@ dependencies = [
  "risc0-zkvm",
  "risc0-zkvm-platform",
  "serde",
- "sov-rollup-interface 0.2.0",
- "sov-zk-cycle-utils 0.2.0",
-]
-
-[[package]]
-name = "sov-risc0-adapter"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
-dependencies = [
- "anyhow",
- "bincode",
- "bytemuck",
- "risc0-circuit-rv32im",
- "risc0-zkp",
- "risc0-zkvm",
- "risc0-zkvm-platform",
- "serde",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-zk-cycle-utils 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
+ "sov-rollup-interface",
+ "sov-zk-cycle-utils",
 ]
 
 [[package]]
@@ -9456,44 +8796,6 @@ dependencies = [
  "proptest-derive",
  "serde",
  "serde_json",
- "sha2 0.10.8",
- "thiserror",
- "tokio",
-]
-
-[[package]]
-name = "sov-rollup-interface"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
-dependencies = [
- "anyhow",
- "async-trait",
- "bincode",
- "borsh",
- "bytes",
- "digest 0.10.7",
- "hex",
- "proptest",
- "proptest-derive",
- "serde",
- "sha2 0.10.8",
- "thiserror",
- "tokio",
-]
-
-[[package]]
-name = "sov-rollup-interface"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
-dependencies = [
- "anyhow",
- "async-trait",
- "bincode",
- "borsh",
- "bytes",
- "digest 0.10.7",
- "hex",
- "serde",
  "sha2 0.10.8",
  "thiserror",
  "tokio",
@@ -9514,32 +8816,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "sov-schema-db"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
-dependencies = [
- "anyhow",
- "once_cell",
- "prometheus 0.13.3",
- "rocksdb",
- "thiserror",
- "tracing",
-]
-
-[[package]]
-name = "sov-schema-db"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
-dependencies = [
- "anyhow",
- "once_cell",
- "prometheus 0.13.3",
- "rocksdb",
- "thiserror",
- "tracing",
-]
-
-[[package]]
 name = "sov-sequencer"
 version = "0.2.0"
 dependencies = [
@@ -9547,96 +8823,39 @@ dependencies = [
  "async-trait",
  "borsh",
  "hex",
- "jsonrpsee 0.18.2",
+ "jsonrpsee 0.20.2",
+ "rand 0.8.5",
  "serde",
- "sov-rollup-interface 0.2.0",
+ "sov-modules-api",
+ "sov-rollup-interface",
+ "sov-state",
+ "sov-value-setter",
+ "tempfile",
  "tokio",
  "tracing",
 ]
 
 [[package]]
-name = "sov-sequencer"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
-dependencies = [
- "anyhow",
- "borsh",
- "hex",
- "jsonrpsee 0.18.2",
- "serde",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "tracing",
-]
-
-[[package]]
-name = "sov-sequencer"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
-dependencies = [
- "anyhow",
- "borsh",
- "hex",
- "jsonrpsee 0.18.2",
- "serde",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "tracing",
-]
-
-[[package]]
 name = "sov-sequencer-registry"
 version = "0.2.0"
 dependencies = [
  "anyhow",
  "borsh",
  "clap 4.4.6",
- "jsonrpsee 0.18.2",
+ "jsonrpsee 0.20.2",
  "risc0-zkvm",
  "risc0-zkvm-platform",
  "schemars",
  "serde",
  "serde_json",
- "sov-bank 0.2.0",
- "sov-modules-api 0.2.0",
- "sov-rollup-interface 0.2.0",
- "sov-sequencer-registry 0.2.0",
- "sov-state 0.2.0",
+ "sov-bank",
+ "sov-modules-api",
+ "sov-rollup-interface",
+ "sov-sequencer-registry",
+ "sov-state",
  "sov-zk-cycle-macros",
- "sov-zk-cycle-utils 0.2.0",
+ "sov-zk-cycle-utils",
  "tempfile",
-]
-
-[[package]]
-name = "sov-sequencer-registry"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
-dependencies = [
- "anyhow",
- "borsh",
- "clap 4.4.6",
- "jsonrpsee 0.18.2",
- "schemars",
- "serde",
- "serde_json",
- "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
-]
-
-[[package]]
-name = "sov-sequencer-registry"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
-dependencies = [
- "anyhow",
- "borsh",
- "clap 4.4.6",
- "jsonrpsee 0.18.2",
- "schemars",
- "serde",
- "serde_json",
- "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
 ]
 
 [[package]]
@@ -9645,63 +8864,26 @@ version = "0.2.0"
 dependencies = [
  "anyhow",
  "arbitrary",
- "bcs 0.1.5",
+ "bcs 0.1.6",
  "borsh",
  "hex",
  "jmt",
  "proptest",
+ "proptest-derive",
  "risc0-zkvm",
  "risc0-zkvm-platform",
  "serde",
  "serde_json",
  "sha2 0.10.8",
- "sov-db 0.2.0",
- "sov-first-read-last-write-cache 0.2.0",
- "sov-rollup-interface 0.2.0",
+ "sov-db",
+ "sov-first-read-last-write-cache",
+ "sov-rollup-interface",
  "sov-zk-cycle-macros",
  "tempfile",
  "thiserror",
 ]
 
 [[package]]
-name = "sov-state"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
-dependencies = [
- "anyhow",
- "bcs 0.1.5",
- "borsh",
- "hex",
- "jmt",
- "serde",
- "serde_json",
- "sha2 0.10.8",
- "sov-db 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-first-read-last-write-cache 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "thiserror",
-]
-
-[[package]]
-name = "sov-state"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
-dependencies = [
- "anyhow",
- "bcs 0.1.5",
- "borsh",
- "hex",
- "jmt",
- "serde",
- "serde_json",
- "sha2 0.10.8",
- "sov-db 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-first-read-last-write-cache 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "thiserror",
-]
-
-[[package]]
 name = "sov-stf-runner"
 version = "0.2.0"
 dependencies = [
@@ -9709,19 +8891,19 @@ dependencies = [
  "borsh",
  "futures",
  "hex",
- "jsonrpsee 0.18.2",
- "rand 0.8.5",
+ "jsonrpsee 0.20.2",
  "serde",
- "sov-accounts 0.2.0",
- "sov-bank 0.2.0",
- "sov-celestia-adapter 0.2.0",
- "sov-db 0.2.0",
- "sov-modules-api 0.2.0",
- "sov-modules-stf-template 0.2.0",
- "sov-rollup-interface 0.2.0",
- "sov-sequencer-registry 0.2.0",
- "sov-state 0.2.0",
- "sov-value-setter 0.2.0",
+ "serde_json",
+ "sov-accounts",
+ "sov-bank",
+ "sov-celestia-adapter",
+ "sov-db",
+ "sov-modules-api",
+ "sov-modules-stf-template",
+ "sov-rollup-interface",
+ "sov-sequencer",
+ "sov-sequencer-registry",
+ "sov-state",
  "tempfile",
  "tokio",
  "toml 0.8.2",
@@ -9729,94 +8911,20 @@ dependencies = [
 ]
 
 [[package]]
-name = "sov-stf-runner"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
-dependencies = [
- "anyhow",
- "borsh",
- "futures",
- "hex",
- "jsonrpsee 0.18.2",
- "serde",
- "sov-db 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "tokio",
- "toml 0.8.2",
- "tracing",
-]
-
-[[package]]
-name = "sov-stf-runner"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
-dependencies = [
- "anyhow",
- "borsh",
- "futures",
- "hex",
- "jsonrpsee 0.18.2",
- "serde",
- "sov-db 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "tokio",
- "toml 0.8.2",
- "tracing",
-]
-
-[[package]]
 name = "sov-value-setter"
 version = "0.2.0"
 dependencies = [
  "anyhow",
  "borsh",
  "clap 4.4.6",
- "jsonrpsee 0.18.2",
+ "jsonrpsee 0.20.2",
  "schemars",
  "serde",
  "serde_json",
- "sov-modules-api 0.2.0",
- "sov-state 0.2.0",
- "sov-value-setter 0.2.0",
+ "sov-modules-api",
+ "sov-state",
+ "sov-value-setter",
  "tempfile",
- "thiserror",
-]
-
-[[package]]
-name = "sov-value-setter"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
-dependencies = [
- "anyhow",
- "borsh",
- "clap 4.4.6",
- "jsonrpsee 0.18.2",
- "schemars",
- "serde",
- "serde_json",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191)",
- "thiserror",
-]
-
-[[package]]
-name = "sov-value-setter"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5#80b76e5e8766dff0fd5a24f95d3cc971c50e3b2f"
-dependencies = [
- "anyhow",
- "borsh",
- "clap 4.4.6",
- "jsonrpsee 0.18.2",
- "schemars",
- "serde",
- "serde_json",
- "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
- "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk.git?rev=80b76e5)",
  "thiserror",
 ]
 
@@ -9827,13 +8935,13 @@ dependencies = [
  "anyhow",
  "borsh",
  "clap 4.4.6",
- "jsonrpsee 0.18.2",
+ "jsonrpsee 0.20.2",
  "schemars",
  "serde",
  "serde_json",
- "sov-modules-api 0.2.0",
- "sov-rollup-interface 0.2.0",
- "sov-state 0.2.0",
+ "sov-modules-api",
+ "sov-rollup-interface",
+ "sov-state",
  "tempfile",
  "thiserror",
 ]
@@ -9849,7 +8957,7 @@ dependencies = [
  "risc0-zkvm",
  "risc0-zkvm-platform",
  "sov-zk-cycle-macros",
- "sov-zk-cycle-utils 0.2.0",
+ "sov-zk-cycle-utils",
  "syn 1.0.109",
  "trybuild",
 ]
@@ -9857,15 +8965,6 @@ dependencies = [
 [[package]]
 name = "sov-zk-cycle-utils"
 version = "0.2.0"
-dependencies = [
- "risc0-zkvm",
- "risc0-zkvm-platform",
-]
-
-[[package]]
-name = "sov-zk-cycle-utils"
-version = "0.2.0"
-source = "git+https://github.com/informalsystems/sovereign-sdk.git?rev=10a6191#10a6191424f12a8e4930054628dabbef4b24fe50"
 dependencies = [
  "risc0-zkvm",
  "risc0-zkvm-platform",
@@ -10003,20 +9102,6 @@ dependencies = [
  "sha2 0.10.8",
  "sha3",
  "sp-std 8.0.0",
- "twox-hash",
-]
-
-[[package]]
-name = "sp-core-hashing"
-version = "10.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e360755a2706a76886d58776665cad0db793dece3c7d390455b28e8a1efd6285"
-dependencies = [
- "blake2b_simd",
- "byteorder",
- "digest 0.10.7",
- "sha2 0.10.8",
- "sha3",
  "twox-hash",
 ]
 
@@ -10212,7 +9297,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a5d5bd5566fe5633ec48dfa35ab152fd29f8a577c21971e1c6db9f28afb9bbb9"
 dependencies = [
  "Inflector",
- "proc-macro-crate 1.3.1",
+ "proc-macro-crate 1.1.3",
  "proc-macro2 1.0.69",
  "quote 1.0.33",
  "syn 2.0.38",
@@ -10225,7 +9310,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b232943ee7ca83a6d56face33b8af12e9fb470a15a53835f4e12a6e452a41c1c"
 dependencies = [
  "Inflector",
- "proc-macro-crate 1.3.1",
+ "proc-macro-crate 1.1.3",
  "proc-macro2 1.0.69",
  "quote 1.0.33",
  "syn 2.0.38",
@@ -10743,10 +9828,16 @@ dependencies = [
 ]
 
 [[package]]
-name = "sync_wrapper"
-version = "0.1.2"
+name = "synstructure"
+version = "0.12.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2047c6ded9c721764247e62cd3b03c09ffc529b2ba5b10ec482ae507a4a70160"
+checksum = "f36bdaa60a83aca3921b5259d5400cbf5e90fc51931376a9bd4a0eb79aa7210f"
+dependencies = [
+ "proc-macro2 1.0.69",
+ "quote 1.0.33",
+ "syn 1.0.109",
+ "unicode-xid 0.2.4",
+]
 
 [[package]]
 name = "synstructure"
@@ -10802,8 +9893,65 @@ dependencies = [
  "cfg-if",
  "fastrand 2.0.1",
  "redox_syscall 0.3.5",
- "rustix 0.38.18",
+ "rustix 0.38.19",
  "windows-sys 0.48.0",
+]
+
+[[package]]
+name = "template-risc0"
+version = "0.2.0"
+dependencies = [
+ "risc0-build",
+]
+
+[[package]]
+name = "template-stf"
+version = "0.2.0"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "clap 4.4.6",
+ "jsonrpsee 0.20.2",
+ "serde",
+ "serde_json",
+ "sov-accounts",
+ "sov-bank",
+ "sov-modules-api",
+ "sov-modules-stf-template",
+ "sov-rollup-interface",
+ "sov-sequencer",
+ "sov-sequencer-registry",
+ "sov-state",
+ "sov-stf-runner",
+ "tracing",
+]
+
+[[package]]
+name = "tendermint"
+version = "0.32.0"
+source = "git+https://github.com/eigerco/celestia-tendermint-rs.git?rev=1f8b574#1f8b574809a43b892f4beb59b887919b484fe232"
+dependencies = [
+ "bytes",
+ "digest 0.10.7",
+ "ed25519 2.2.2",
+ "ed25519-consensus",
+ "flex-error",
+ "futures",
+ "num-traits",
+ "once_cell",
+ "prost 0.12.1",
+ "prost-types 0.12.1",
+ "serde",
+ "serde_bytes",
+ "serde_json",
+ "serde_repr",
+ "sha2 0.10.8",
+ "signature 2.1.0",
+ "subtle",
+ "subtle-encoding",
+ "tendermint-proto 0.32.0",
+ "time",
+ "zeroize",
 ]
 
 [[package]]
@@ -10836,44 +9984,19 @@ dependencies = [
 ]
 
 [[package]]
-name = "tendermint"
-version = "0.33.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7c35fe4fd24a7715571814c22416dbc40ec0f2a6e3cce75d73e19699faecd246"
+name = "tendermint-proto"
+version = "0.32.0"
+source = "git+https://github.com/eigerco/celestia-tendermint-rs.git?rev=1f8b574#1f8b574809a43b892f4beb59b887919b484fe232"
 dependencies = [
  "bytes",
- "digest 0.10.7",
- "ed25519 2.2.2",
- "ed25519-consensus",
  "flex-error",
- "futures",
+ "num-derive 0.3.3",
  "num-traits",
- "once_cell",
- "prost 0.11.9",
- "prost-types 0.11.9",
+ "prost 0.12.1",
+ "prost-types 0.12.1",
  "serde",
  "serde_bytes",
- "serde_json",
- "serde_repr",
- "sha2 0.10.8",
- "signature 2.1.0",
- "subtle",
  "subtle-encoding",
- "tendermint-proto 0.33.2",
- "time",
- "zeroize",
-]
-
-[[package]]
-name = "tendermint-light-client-verifier"
-version = "0.33.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "680639f67d51eceb700bff18b45b584373ec94ee0d7ffe61f4ca6c54ed7787ff"
-dependencies = [
- "derive_more",
- "flex-error",
- "serde",
- "tendermint 0.33.2",
  "time",
 ]
 
@@ -10892,40 +10015,6 @@ dependencies = [
  "serde",
  "serde_bytes",
  "subtle-encoding",
- "time",
-]
-
-[[package]]
-name = "tendermint-proto"
-version = "0.33.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "639e5adffd77220d238a800a72c74c98d7e869290a6e4494c10b6b4e8f702f02"
-dependencies = [
- "bytes",
- "flex-error",
- "num-derive 0.3.3",
- "num-traits",
- "prost 0.11.9",
- "prost-types 0.11.9",
- "serde",
- "serde_bytes",
- "subtle-encoding",
- "time",
-]
-
-[[package]]
-name = "tendermint-testgen"
-version = "0.33.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6768bef6580abe3987cda669dc02fdfb18593e763ff2f4976ef6c58f20bde90a"
-dependencies = [
- "ed25519-consensus",
- "gumdrop",
- "serde",
- "serde_json",
- "simple-error",
- "tempfile",
- "tendermint 0.33.2",
  "time",
 ]
 
@@ -11016,14 +10105,15 @@ dependencies = [
 
 [[package]]
 name = "time"
-version = "0.3.28"
+version = "0.3.30"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "17f6bb557fd245c28e6411aa56b6403c689ad95061f50e4be16c274e70a17e48"
+checksum = "c4a34ab300f2dee6e562c10a046fc05e358b29f9bf92277f30c3c8d82275f6f5"
 dependencies = [
  "deranged",
  "itoa",
  "libc",
  "num_threads",
+ "powerfmt",
  "serde",
  "time-core",
  "time-macros",
@@ -11031,15 +10121,15 @@ dependencies = [
 
 [[package]]
 name = "time-core"
-version = "0.1.1"
+version = "0.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7300fbefb4dadc1af235a9cef3737cea692a9d97e1b9cbcd4ebdae6f8868e6fb"
+checksum = "ef927ca75afb808a4d64dd374f00a2adf8d0fcff8e7b184af886c3c87ec4a3f3"
 
 [[package]]
 name = "time-macros"
-version = "0.2.14"
+version = "0.2.15"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1a942f44339478ef67935ab2bbaec2fb0322496cf3cbe84b261e06ac3814c572"
+checksum = "4ad70d68dba9e1f8aceda7aa6711965dfec1cac869f311a51bd08b3a2ccbce20"
 dependencies = [
  "time-core",
 ]
@@ -11125,16 +10215,6 @@ dependencies = [
  "socket2 0.5.4",
  "tokio-macros",
  "windows-sys 0.48.0",
-]
-
-[[package]]
-name = "tokio-io-timeout"
-version = "1.2.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "30b74022ada614a1b4834de765f9bb43877f910cc8ce4be40e89042c9223a8bf"
-dependencies = [
- "pin-project-lite",
- "tokio",
 ]
 
 [[package]]
@@ -11306,34 +10386,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "tonic"
-version = "0.9.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3082666a3a6433f7f511c7192923fa1fe07c69332d3c6a2e6bb040b569199d5a"
-dependencies = [
- "async-trait",
- "axum",
- "base64 0.21.4",
- "bytes",
- "futures-core",
- "futures-util",
- "h2",
- "http",
- "http-body",
- "hyper",
- "hyper-timeout",
- "percent-encoding",
- "pin-project",
- "prost 0.11.9",
- "tokio",
- "tokio-stream",
- "tower",
- "tower-layer",
- "tower-service",
- "tracing",
-]
-
-[[package]]
 name = "tower"
 version = "0.4.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -11341,13 +10393,8 @@ checksum = "b8fa9be0de6cf49e536ce1851f987bd21a43b771b09473c3549a6c853db37c1c"
 dependencies = [
  "futures-core",
  "futures-util",
- "indexmap 1.9.3",
  "pin-project",
  "pin-project-lite",
- "rand 0.8.5",
- "slab",
- "tokio",
- "tokio-util",
  "tower-layer",
  "tower-service",
  "tracing",
@@ -11367,11 +10414,10 @@ checksum = "b6bc1c9ce2b5135ac7f93c72918fc37feb872bdc6a5533a8b85eb4b86bfdae52"
 
 [[package]]
 name = "tracing"
-version = "0.1.37"
+version = "0.1.39"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8ce8c33a8d48bd45d624a6e523445fd21ec13d3653cd51f681abf67418f54eb8"
+checksum = "ee2ef2af84856a50c1d430afce2fdded0a4ec7eda868db86409b4543df0797f9"
 dependencies = [
- "cfg-if",
  "log",
  "pin-project-lite",
  "tracing-attributes",
@@ -11380,9 +10426,9 @@ dependencies = [
 
 [[package]]
 name = "tracing-attributes"
-version = "0.1.26"
+version = "0.1.27"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5f4f31f56159e98206da9efd823404b79b6ef3143b4a7ab76e67b1751b25a4ab"
+checksum = "34704c8d6ebcbc939824180af020566b01a7c01f80641264eba0999f6c2b6be7"
 dependencies = [
  "proc-macro2 1.0.69",
  "quote 1.0.33",
@@ -11391,9 +10437,9 @@ dependencies = [
 
 [[package]]
 name = "tracing-core"
-version = "0.1.31"
+version = "0.1.32"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0955b8137a1df6f1a2e9a37d8a6656291ff0297c1a97c24e0d8425fe2312f79a"
+checksum = "c06d3da6113f116aaee68e4d601191614c9053067f9ab7f6edbcb161237daa54"
 dependencies = [
  "once_cell",
  "valuable",
@@ -11736,6 +10782,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "unsigned-varint"
+version = "0.7.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6889a77d49f1f013504cec6bf97a2c730394adedaeb1deb5ea08949a50541105"
+
+[[package]]
 name = "untrusted"
 version = "0.7.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -12057,7 +11109,7 @@ dependencies = [
  "memoffset 0.8.0",
  "paste",
  "rand 0.8.5",
- "rustix 0.36.15",
+ "rustix 0.36.16",
  "wasmtime-asm-macros",
  "wasmtime-environ",
  "wasmtime-jit-debug",
@@ -12110,7 +11162,7 @@ dependencies = [
  "either",
  "home",
  "once_cell",
- "rustix 0.38.18",
+ "rustix 0.38.19",
 ]
 
 [[package]]
@@ -12303,9 +11355,9 @@ checksum = "ed94fce61571a4006852b7389a063ab983c02eb1bb37b47f8272ce92d06d9538"
 
 [[package]]
 name = "winnow"
-version = "0.5.16"
+version = "0.5.17"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "037711d82167854aff2018dfd193aa0fef5370f456732f0d5a0c59b0f1b4b907"
+checksum = "a3b801d0e0a6726477cc207f60162da452f3a95adb368399bef20a946e06f65c"
 dependencies = [
  "memchr",
 ]
@@ -12439,7 +11491,7 @@ dependencies = [
  "proc-macro2 1.0.69",
  "quote 1.0.33",
  "syn 2.0.38",
- "synstructure",
+ "synstructure 0.13.0",
 ]
 
 [[package]]
@@ -12460,7 +11512,7 @@ dependencies = [
  "proc-macro2 1.0.69",
  "quote 1.0.33",
  "syn 2.0.38",
- "synstructure",
+ "synstructure 0.13.0",
 ]
 
 [[package]]
@@ -12566,11 +11618,10 @@ dependencies = [
 
 [[package]]
 name = "zstd-sys"
-version = "2.0.8+zstd.1.5.5"
+version = "2.0.9+zstd.1.5.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5556e6ee25d32df2586c098bbfa278803692a20d0ab9565e049480d52707ec8c"
+checksum = "9e16efa8a874a0481a574084d34cc26fdb3b99627480f785888deb6386506656"
 dependencies = [
  "cc",
- "libc",
  "pkg-config",
 ]
