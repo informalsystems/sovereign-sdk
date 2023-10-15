@@ -72,6 +72,10 @@ use sov_value_setter::{ValueSetterRpcImpl, ValueSetterRpcServer};
 pub struct Runtime<C: Context, Da: DaSpec> {
     /// The Bank module.
     pub bank: sov_bank::Bank<C>,
+    /// The IBC core module.
+    pub ibc: sov_ibc::Ibc<C, Da>,
+    /// The IBC transfer application module.
+    pub ibc_transfer: sov_ibc_transfer::IbcTransfer<C>,
     /// The Sequencer Registry module.
     pub sequencer_registry: sov_sequencer_registry::SequencerRegistry<C, Da>,
     #[cfg_attr(feature = "native", cli_skip)]
@@ -90,8 +94,6 @@ pub struct Runtime<C: Context, Da: DaSpec> {
     #[cfg_attr(feature = "native", cli_skip)]
     /// The EVM module.
     pub evm: sov_evm::Evm<C>,
-    pub ibc: sov_ibc::Ibc<C, Da>,
-    pub ibc_transfer: sov_ibc_transfer::IbcTransfer<C>,
 }
 
 impl<C, Da> sov_modules_stf_template::Runtime<C, Da> for Runtime<C, Da>

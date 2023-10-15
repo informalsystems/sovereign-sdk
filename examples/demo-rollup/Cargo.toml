@@ -13,15 +13,15 @@ default-run = "sov-demo-rollup"
 
 [dependencies]
 # non-optional dependencies
-sov-celestia-adapter = { path = "../../adapters/celestia", features = ["native"] }
-const-rollup-config = { path = "../const-rollup-config" }
-sov-stf-runner = { path = "../../full-node/sov-stf-runner", features = ["native"] }
-sov-rollup-interface = { path = "../../rollup-interface", features = ["native"] }
-sov-modules-stf-template = { path = "../../module-system/sov-modules-stf-template", features = ["native"] }
-sov-modules-api = { path = "../../module-system/sov-modules-api", features = ["native"] }
-sov-nft-module = { path = "../../module-system/module-implementations/sov-nft-module" }
+sov-celestia-adapter = { git = "https://github.com/informalsystems/sovereign-sdk", branch = "farhad/demo-rollup-with-ibc", features = ["native"] }
+const-rollup-config = { git = "https://github.com/informalsystems/sovereign-sdk", branch = "farhad/demo-rollup-with-ibc" }
+sov-stf-runner = { git = "https://github.com/informalsystems/sovereign-sdk", branch = "farhad/demo-rollup-with-ibc", features = ["native"] }
+sov-rollup-interface = { git = "https://github.com/informalsystems/sovereign-sdk", branch = "farhad/demo-rollup-with-ibc", features = ["native"] }
+sov-modules-stf-template = { git = "https://github.com/informalsystems/sovereign-sdk", branch = "farhad/demo-rollup-with-ibc", features = ["native"] }
+sov-modules-api = { git = "https://github.com/informalsystems/sovereign-sdk", branch = "farhad/demo-rollup-with-ibc", features = ["native"] }
+sov-nft-module = { git = "https://github.com/informalsystems/sovereign-sdk", branch = "farhad/demo-rollup-with-ibc"}
 demo-stf = { path = "./stf", features = ["native"] }
-risc0 = { path = "./provers/risc0" }
+risc0 = { git = "https://github.com/informalsystems/sovereign-sdk", branch = "farhad/demo-rollup-with-ibc" }
 borsh = { workspace = true, features = ["bytes"]}
 async-trait = { workspace = true, optional = true }
 anyhow = { workspace = true }
@@ -37,19 +37,19 @@ tokio = { workspace = true }
 reth-primitives = { workspace = true, optional = true }
 tracing-subscriber = { version = "0.3.17", features = ["env-filter"] }
 
-sov-db = { path = "../../full-node/db/sov-db" }
-sov-ethereum = { path = "../../full-node/sov-ethereum", optional = true }
-sov-sequencer = { path = "../../full-node/sov-sequencer"}
-sov-risc0-adapter = { path = "../../adapters/risc0", features = ["native"] }
-sov-state = { path = "../../module-system/sov-state", features = ["native"] }
-sov-cli = { path = "../../module-system/sov-cli" }
+sov-db = { git = "https://github.com/informalsystems/sovereign-sdk", branch = "farhad/demo-rollup-with-ibc" }
+sov-ethereum = { git = "https://github.com/informalsystems/sovereign-sdk", branch = "farhad/demo-rollup-with-ibc", optional = true }
+sov-sequencer = { git = "https://github.com/informalsystems/sovereign-sdk", branch = "farhad/demo-rollup-with-ibc" }
+sov-risc0-adapter = { git = "https://github.com/informalsystems/sovereign-sdk", branch = "farhad/demo-rollup-with-ibc", features = ["native"] }
+sov-state = { git = "https://github.com/informalsystems/sovereign-sdk", branch = "farhad/demo-rollup-with-ibc", features = ["native"] }
+sov-cli = { git = "https://github.com/informalsystems/sovereign-sdk", branch = "farhad/demo-rollup-with-ibc" }
 clap = { workspace = true}
 
 [dev-dependencies]
-sov-rollup-interface = { path = "../../rollup-interface", features = ["fuzzing"] }
-sov-evm = { path = "../../module-system/module-implementations/sov-evm", features = ["smart_contracts"] }
-sov-bank = { path = "../../module-system/module-implementations/sov-bank", features = ["native"] }
-sov-zk-cycle-macros = { path = "../../utils/zk-cycle-macros"}
+sov-rollup-interface = { git = "https://github.com/informalsystems/sovereign-sdk", branch = "farhad/demo-rollup-with-ibc", features = ["fuzzing"] }
+sov-evm = { git = "https://github.com/informalsystems/sovereign-sdk", branch = "farhad/demo-rollup-with-ibc", features = ["smart_contracts"] }
+sov-bank = { git = "https://github.com/informalsystems/sovereign-sdk", branch = "farhad/demo-rollup-with-ibc", features = ["native"] }
+sov-zk-cycle-macros = { git = "https://github.com/informalsystems/sovereign-sdk", branch = "farhad/demo-rollup-with-ibc" }
 
 borsh = { workspace = true }
 bincode = { workspace = true }

@@ -460,6 +460,28 @@ dependencies = [
 ]
 
 [[package]]
+name = "async-stream"
+version = "0.3.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "cd56dd203fef61ac097dd65721a419ddccb106b2d2b70ba60a6b529f03961a51"
+dependencies = [
+ "async-stream-impl",
+ "futures-core",
+ "pin-project-lite",
+]
+
+[[package]]
+name = "async-stream-impl"
+version = "0.3.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "16e62a023e7c117e27523144c5d2459f4397fcc3cab0085af8e2224f643a0193"
+dependencies = [
+ "proc-macro2 1.0.69",
+ "quote 1.0.33",
+ "syn 2.0.38",
+]
+
+[[package]]
 name = "async-trait"
 version = "0.1.73"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -570,6 +592,51 @@ dependencies = [
  "structopt",
  "subxt",
  "tokio",
+]
+
+[[package]]
+name = "axum"
+version = "0.6.20"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3b829e4e32b91e643de6eafe82b1d90675f5874230191a4ffbc1b336dec4d6bf"
+dependencies = [
+ "async-trait",
+ "axum-core",
+ "bitflags 1.3.2",
+ "bytes",
+ "futures-util",
+ "http",
+ "http-body",
+ "hyper",
+ "itoa",
+ "matchit",
+ "memchr",
+ "mime",
+ "percent-encoding",
+ "pin-project-lite",
+ "rustversion",
+ "serde",
+ "sync_wrapper",
+ "tower",
+ "tower-layer",
+ "tower-service",
+]
+
+[[package]]
+name = "axum-core"
+version = "0.3.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "759fa577a247914fd3f7f76d62972792636412fbfd634cd452f6a385a74d2d2c"
+dependencies = [
+ "async-trait",
+ "bytes",
+ "futures-util",
+ "http",
+ "http-body",
+ "mime",
+ "rustversion",
+ "tower-layer",
+ "tower-service",
 ]
 
 [[package]]
@@ -1554,6 +1621,11 @@ name = "const-rollup-config"
 version = "0.2.0"
 
 [[package]]
+name = "const-rollup-config"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
+
+[[package]]
 name = "const_format"
 version = "0.2.32"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2095,7 +2167,7 @@ dependencies = [
  "hex",
  "serde",
  "sha2 0.10.8",
- "sov-rollup-interface",
+ "sov-rollup-interface 0.2.0",
 ]
 
 [[package]]
@@ -2105,31 +2177,67 @@ dependencies = [
  "anyhow",
  "borsh",
  "clap 4.4.6",
- "demo-stf",
+ "demo-stf 0.2.0",
  "hex",
  "jsonrpsee 0.20.2",
  "rand 0.8.5",
  "reth-primitives",
  "serde",
  "serde_json",
- "simple-nft-module",
- "sov-accounts",
- "sov-bank",
- "sov-blob-storage",
- "sov-chain-state",
- "sov-cli",
- "sov-data-generators",
- "sov-evm",
- "sov-modules-api",
- "sov-modules-stf-template",
- "sov-nft-module",
- "sov-rollup-interface",
- "sov-sequencer",
- "sov-sequencer-registry",
- "sov-state",
- "sov-stf-runner",
- "sov-value-setter",
+ "simple-nft-module 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-accounts 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-blob-storage 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-chain-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-cli 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-data-generators 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-evm 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-ibc",
+ "sov-ibc-transfer",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-modules-stf-template 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-nft-module 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-sequencer 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-sequencer-registry 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-stf-runner 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-value-setter 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
  "tempfile",
+ "tokio",
+ "toml 0.8.2",
+ "tracing",
+]
+
+[[package]]
+name = "demo-stf"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "clap 4.4.6",
+ "hex",
+ "jsonrpsee 0.20.2",
+ "reth-primitives",
+ "serde",
+ "serde_json",
+ "simple-nft-module 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-accounts 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-blob-storage 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-chain-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-cli 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-evm 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-modules-stf-template 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-nft-module 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-sequencer 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-sequencer-registry 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-stf-runner 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-value-setter 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
  "tokio",
  "toml 0.8.2",
  "tracing",
@@ -2151,7 +2259,6 @@ version = "0.3.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0f32d04922c60427da6f9fef14d042d9edddef64cb9d4ce0d64d0685fbeb1fd3"
 dependencies = [
- "powerfmt",
  "serde",
 ]
 
@@ -3481,6 +3588,26 @@ dependencies = [
 ]
 
 [[package]]
+name = "gumdrop"
+version = "0.8.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5bc700f989d2f6f0248546222d9b4258f5b02a171a431f8285a81c08142629e3"
+dependencies = [
+ "gumdrop_derive",
+]
+
+[[package]]
+name = "gumdrop_derive"
+version = "0.8.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "729f9bd3449d77e7831a18abfb7ba2f99ee813dfd15b8c2167c9a54ba20aa99d"
+dependencies = [
+ "proc-macro2 1.0.69",
+ "quote 1.0.33",
+ "syn 1.0.109",
+]
+
+[[package]]
 name = "h2"
 version = "0.3.21"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3825,6 +3952,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "hyper-timeout"
+version = "0.4.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bbb958482e8c7be4bc3cf272a766a2b0bf1a6755e7a6ae777f017a31d11b13b1"
+dependencies = [
+ "hyper",
+ "pin-project-lite",
+ "tokio",
+ "tokio-io-timeout",
+]
+
+[[package]]
 name = "hyper-tls"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3861,6 +4000,77 @@ dependencies = [
 ]
 
 [[package]]
+name = "ibc"
+version = "0.46.0"
+source = "git+https://github.com/cosmos/ibc-rs?rev=b7dd19d#b7dd19dff88540ffe841f3967b60c62673fc9a67"
+dependencies = [
+ "borsh",
+ "bytes",
+ "derive_more",
+ "displaydoc",
+ "ibc-derive",
+ "ibc-proto",
+ "ics23 0.11.0",
+ "num-traits",
+ "parking_lot 0.12.1",
+ "primitive-types",
+ "prost 0.12.1",
+ "schemars",
+ "serde",
+ "serde-json-wasm",
+ "serde_derive",
+ "sha2 0.10.8",
+ "subtle-encoding",
+ "tendermint 0.34.0",
+ "tendermint-light-client-verifier",
+ "tendermint-proto 0.34.0",
+ "tendermint-testgen",
+ "time",
+ "tracing",
+ "uint",
+]
+
+[[package]]
+name = "ibc-derive"
+version = "0.3.0"
+source = "git+https://github.com/cosmos/ibc-rs?rev=b7dd19d#b7dd19dff88540ffe841f3967b60c62673fc9a67"
+dependencies = [
+ "darling 0.20.3",
+ "proc-macro2 1.0.69",
+ "quote 1.0.33",
+ "syn 2.0.38",
+]
+
+[[package]]
+name = "ibc-proto"
+version = "0.37.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "63042806bb2f662ca1c68026231900cfe13361136ddfd0dd09bcb315056a22b8"
+dependencies = [
+ "base64 0.21.4",
+ "borsh",
+ "bytes",
+ "flex-error",
+ "ics23 0.11.0",
+ "prost 0.12.1",
+ "serde",
+ "subtle-encoding",
+ "tendermint-proto 0.34.0",
+ "tonic",
+]
+
+[[package]]
+name = "ibc-query"
+version = "0.46.0"
+source = "git+https://github.com/cosmos/ibc-rs?rev=b7dd19d#b7dd19dff88540ffe841f3967b60c62673fc9a67"
+dependencies = [
+ "displaydoc",
+ "ibc",
+ "ibc-proto",
+ "tonic",
+]
+
+[[package]]
 name = "ics23"
 version = "0.10.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3871,6 +4081,23 @@ dependencies = [
  "hex",
  "informalsystems-pbjson",
  "prost 0.11.9",
+ "ripemd",
+ "serde",
+ "sha2 0.10.8",
+ "sha3",
+]
+
+[[package]]
+name = "ics23"
+version = "0.11.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "661e2d6f79952a65bc92b1c81f639ebd37228dae6ff412a5aba7d474bdc4b957"
+dependencies = [
+ "anyhow",
+ "bytes",
+ "hex",
+ "informalsystems-pbjson",
+ "prost 0.12.1",
  "ripemd",
  "serde",
  "sha2 0.10.8",
@@ -4154,14 +4381,14 @@ dependencies = [
  "anyhow",
  "borsh",
  "serde",
- "sov-chain-state",
- "sov-data-generators",
- "sov-modules-api",
- "sov-modules-stf-template",
- "sov-rollup-interface",
- "sov-schema-db",
- "sov-state",
- "sov-value-setter",
+ "sov-chain-state 0.2.0",
+ "sov-data-generators 0.2.0",
+ "sov-modules-api 0.2.0",
+ "sov-modules-stf-template 0.2.0",
+ "sov-rollup-interface 0.2.0",
+ "sov-schema-db 0.2.0",
+ "sov-state 0.2.0",
+ "sov-value-setter 0.2.0",
  "tempfile",
 ]
 
@@ -4234,7 +4461,7 @@ dependencies = [
  "digest 0.10.7",
  "hashbrown 0.13.2",
  "hex",
- "ics23",
+ "ics23 0.10.2",
  "itertools 0.10.5",
  "mirai-annotations",
  "num-derive 0.3.3",
@@ -4895,6 +5122,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2532096657941c2fea9c289d370a250971c689d4f143798ff67113ec042024a5"
 
 [[package]]
+name = "matchit"
+version = "0.7.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0e7465ac9959cc2b1404e8e2367b43684a6d13790fe23056cc8c6c5a6b7bcb94"
+
+[[package]]
 name = "matrixmultiply"
 version = "0.3.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -5074,10 +5307,10 @@ dependencies = [
  "schemars",
  "serde",
  "serde_json",
- "sov-bank",
- "sov-modules-api",
- "sov-rollup-interface",
- "sov-state",
+ "sov-bank 0.2.0",
+ "sov-modules-api 0.2.0",
+ "sov-rollup-interface 0.2.0",
+ "sov-state 0.2.0",
  "tempfile",
  "thiserror",
 ]
@@ -5992,12 +6225,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "powerfmt"
-version = "0.2.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "439ee305def115ba05938db6eb1644ff94165c5ab5e9420d1c1bcedbba909391"
-
-[[package]]
 name = "ppv-lite86"
 version = "0.2.17"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -6496,14 +6723,14 @@ dependencies = [
 
 [[package]]
 name = "regex"
-version = "1.10.0"
+version = "1.10.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d119d7c7ca818f8a53c300863d4f87566aac09943aef5b355bb83969dae75d87"
+checksum = "aaac441002f822bc9705a681810a4dd2963094b9ca0ddc41cb963a4c189189ea"
 dependencies = [
  "aho-corasick",
  "memchr",
- "regex-automata 0.4.1",
- "regex-syntax 0.8.1",
+ "regex-automata 0.4.2",
+ "regex-syntax 0.8.2",
 ]
 
 [[package]]
@@ -6517,13 +6744,13 @@ dependencies = [
 
 [[package]]
 name = "regex-automata"
-version = "0.4.1"
+version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "465c6fc0621e4abc4187a2bda0937bfd4f722c2730b29562e19689ea796c9a4b"
+checksum = "5011c7e263a695dc8ca064cddb722af1be54e517a280b12a5356f98366899e5d"
 dependencies = [
  "aho-corasick",
  "memchr",
- "regex-syntax 0.8.1",
+ "regex-syntax 0.8.2",
 ]
 
 [[package]]
@@ -6540,9 +6767,9 @@ checksum = "dbb5fb1acd8a1a18b3dd5be62d25485eb770e05afb408a9627d14d451bae12da"
 
 [[package]]
 name = "regex-syntax"
-version = "0.8.1"
+version = "0.8.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "56d84fdd47036b038fc80dd333d10b6aab10d5d31f4a366e20014def75328d33"
+checksum = "c08c74e62047bb2de4ff487b251e4a92e24f48745648451635cec7d591162d9f"
 
 [[package]]
 name = "regress"
@@ -7111,6 +7338,7 @@ dependencies = [
 [[package]]
 name = "risc0"
 version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
 dependencies = [
  "risc0-build",
 ]
@@ -7325,17 +7553,17 @@ dependencies = [
  "jsonrpsee 0.20.2",
  "serde",
  "serde_json",
- "sov-accounts",
- "sov-bank",
- "sov-db",
- "sov-modules-api",
- "sov-modules-stf-template",
- "sov-risc0-adapter",
- "sov-rollup-interface",
- "sov-sequencer",
- "sov-sequencer-registry",
- "sov-state",
- "sov-stf-runner",
+ "sov-accounts 0.2.0",
+ "sov-bank 0.2.0",
+ "sov-db 0.2.0",
+ "sov-modules-api 0.2.0",
+ "sov-modules-stf-template 0.2.0",
+ "sov-risc0-adapter 0.2.0",
+ "sov-rollup-interface 0.2.0",
+ "sov-sequencer 0.2.0",
+ "sov-sequencer-registry 0.2.0",
+ "sov-state 0.2.0",
+ "sov-stf-runner 0.2.0",
  "tempfile",
  "template-risc0",
  "template-stf",
@@ -7911,6 +8139,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "serde-json-wasm"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "83c37d03f3b0f6b5f77c11af1e7c772de1c9af83e50bef7bb6069601900ba67b"
+dependencies = [
+ "serde",
+]
+
+[[package]]
 name = "serde-value"
 version = "0.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -8163,6 +8400,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "simple-error"
+version = "0.2.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "cc47a29ce97772ca5c927f75bac34866b16d64e07f330c3248e2d7226623901b"
+
+[[package]]
 name = "simple-nft-module"
 version = "0.2.0"
 dependencies = [
@@ -8173,11 +8416,43 @@ dependencies = [
  "schemars",
  "serde",
  "serde_json",
- "simple-nft-module",
- "sov-modules-api",
- "sov-rollup-interface",
- "sov-state",
+ "simple-nft-module 0.2.0",
+ "sov-modules-api 0.2.0",
+ "sov-rollup-interface 0.2.0",
+ "sov-state 0.2.0",
  "tempfile",
+]
+
+[[package]]
+name = "simple-nft-module"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc#606a6f9dc0c639828f6391cbd48ebb48fc4be93a"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "clap 4.4.6",
+ "jsonrpsee 0.20.2",
+ "schemars",
+ "serde",
+ "serde_json",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+]
+
+[[package]]
+name = "simple-nft-module"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "clap 4.4.6",
+ "jsonrpsee 0.20.2",
+ "schemars",
+ "serde",
+ "serde_json",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
 ]
 
 [[package]]
@@ -8294,8 +8569,8 @@ dependencies = [
  "borsh",
  "jsonrpsee 0.20.2",
  "serde",
- "sov-modules-api",
- "sov-state",
+ "sov-modules-api 0.2.0",
+ "sov-state 0.2.0",
  "tempfile",
 ]
 
@@ -8313,10 +8588,44 @@ dependencies = [
  "schemars",
  "serde",
  "serde_json",
- "sov-accounts",
- "sov-modules-api",
- "sov-state",
+ "sov-accounts 0.2.0",
+ "sov-modules-api 0.2.0",
+ "sov-state 0.2.0",
  "tempfile",
+ "thiserror",
+]
+
+[[package]]
+name = "sov-accounts"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc#606a6f9dc0c639828f6391cbd48ebb48fc4be93a"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "clap 4.4.6",
+ "jsonrpsee 0.20.2",
+ "schemars",
+ "serde",
+ "serde_json",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "thiserror",
+]
+
+[[package]]
+name = "sov-accounts"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "clap 4.4.6",
+ "jsonrpsee 0.20.2",
+ "schemars",
+ "serde",
+ "serde_json",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
  "thiserror",
 ]
 
@@ -8331,11 +8640,11 @@ dependencies = [
  "serde",
  "serde_json",
  "sov-attester-incentives",
- "sov-bank",
- "sov-chain-state",
- "sov-modules-api",
- "sov-rollup-interface",
- "sov-state",
+ "sov-bank 0.2.0",
+ "sov-chain-state 0.2.0",
+ "sov-modules-api 0.2.0",
+ "sov-rollup-interface 0.2.0",
+ "sov-state 0.2.0",
  "tempfile",
  "thiserror",
 ]
@@ -8354,7 +8663,7 @@ dependencies = [
  "reqwest",
  "serde",
  "serde_json",
- "sov-rollup-interface",
+ "sov-rollup-interface 0.2.0",
  "sp-core 21.0.0",
  "sp-core-hashing 12.0.0",
  "sp-keyring",
@@ -8376,11 +8685,47 @@ dependencies = [
  "schemars",
  "serde",
  "serde_json",
- "sov-bank",
- "sov-modules-api",
- "sov-rollup-interface",
- "sov-state",
+ "sov-bank 0.2.0",
+ "sov-modules-api 0.2.0",
+ "sov-rollup-interface 0.2.0",
+ "sov-state 0.2.0",
  "tempfile",
+ "thiserror",
+]
+
+[[package]]
+name = "sov-bank"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc#606a6f9dc0c639828f6391cbd48ebb48fc4be93a"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "clap 4.4.6",
+ "jsonrpsee 0.20.2",
+ "schemars",
+ "serde",
+ "serde_json",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "thiserror",
+]
+
+[[package]]
+name = "sov-bank"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "clap 4.4.6",
+ "jsonrpsee 0.20.2",
+ "schemars",
+ "serde",
+ "serde_json",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
  "thiserror",
 ]
 
@@ -8397,14 +8742,54 @@ dependencies = [
  "schemars",
  "serde",
  "serde_json",
- "sov-bank",
- "sov-blob-storage",
- "sov-chain-state",
- "sov-modules-api",
- "sov-rollup-interface",
- "sov-sequencer-registry",
- "sov-state",
+ "sov-bank 0.2.0",
+ "sov-blob-storage 0.2.0",
+ "sov-chain-state 0.2.0",
+ "sov-modules-api 0.2.0",
+ "sov-rollup-interface 0.2.0",
+ "sov-sequencer-registry 0.2.0",
+ "sov-state 0.2.0",
  "tempfile",
+ "tracing",
+]
+
+[[package]]
+name = "sov-blob-storage"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc#606a6f9dc0c639828f6391cbd48ebb48fc4be93a"
+dependencies = [
+ "anyhow",
+ "bincode",
+ "borsh",
+ "hex",
+ "jsonrpsee 0.20.2",
+ "schemars",
+ "serde",
+ "serde_json",
+ "sov-chain-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-sequencer-registry 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "tracing",
+]
+
+[[package]]
+name = "sov-blob-storage"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
+dependencies = [
+ "anyhow",
+ "bincode",
+ "borsh",
+ "hex",
+ "jsonrpsee 0.20.2",
+ "schemars",
+ "serde",
+ "serde_json",
+ "sov-chain-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-sequencer-registry 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
  "tracing",
 ]
 
@@ -8431,15 +8816,43 @@ dependencies = [
  "serde",
  "serde_json",
  "sha2 0.10.8",
- "sov-celestia-adapter",
- "sov-rollup-interface",
- "sov-zk-cycle-macros",
+ "sov-celestia-adapter 0.2.0",
+ "sov-rollup-interface 0.2.0",
+ "sov-zk-cycle-macros 0.2.0",
  "tendermint 0.32.0",
  "tendermint-proto 0.32.0",
  "thiserror",
  "tokio",
  "tracing",
  "wiremock",
+]
+
+[[package]]
+name = "sov-celestia-adapter"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "base64 0.21.4",
+ "bech32",
+ "borsh",
+ "celestia-proto",
+ "celestia-rpc",
+ "celestia-types",
+ "hex",
+ "jsonrpsee 0.20.2",
+ "nmt-rs",
+ "prost 0.12.1",
+ "serde",
+ "serde_json",
+ "sha2 0.10.8",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "tendermint 0.32.0",
+ "tendermint-proto 0.32.0",
+ "thiserror",
+ "tokio",
+ "tracing",
 ]
 
 [[package]]
@@ -8451,12 +8864,42 @@ dependencies = [
  "jsonrpsee 0.20.2",
  "serde",
  "serde_json",
- "sov-chain-state",
- "sov-data-generators",
- "sov-modules-api",
- "sov-rollup-interface",
- "sov-state",
+ "sov-chain-state 0.2.0",
+ "sov-data-generators 0.2.0",
+ "sov-modules-api 0.2.0",
+ "sov-rollup-interface 0.2.0",
+ "sov-state 0.2.0",
  "tempfile",
+]
+
+[[package]]
+name = "sov-chain-state"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc#606a6f9dc0c639828f6391cbd48ebb48fc4be93a"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "jsonrpsee 0.20.2",
+ "serde",
+ "serde_json",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+]
+
+[[package]]
+name = "sov-chain-state"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "jsonrpsee 0.20.2",
+ "serde",
+ "serde_json",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
 ]
 
 [[package]]
@@ -8465,17 +8908,51 @@ version = "0.2.0"
 dependencies = [
  "anyhow",
  "borsh",
- "demo-stf",
+ "demo-stf 0.2.0",
  "directories",
  "hex",
  "jsonrpsee 0.20.2",
  "serde",
  "serde_json",
- "sov-accounts",
- "sov-bank",
- "sov-modules-api",
- "sov-rollup-interface",
+ "sov-accounts 0.2.0",
+ "sov-bank 0.2.0",
+ "sov-modules-api 0.2.0",
+ "sov-rollup-interface 0.2.0",
  "tempfile",
+]
+
+[[package]]
+name = "sov-cli"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc#606a6f9dc0c639828f6391cbd48ebb48fc4be93a"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "directories",
+ "hex",
+ "jsonrpsee 0.20.2",
+ "serde",
+ "serde_json",
+ "sov-accounts 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+]
+
+[[package]]
+name = "sov-cli"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "directories",
+ "hex",
+ "jsonrpsee 0.20.2",
+ "serde",
+ "serde_json",
+ "sov-accounts 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
 ]
 
 [[package]]
@@ -8484,12 +8961,26 @@ version = "0.2.0"
 dependencies = [
  "borsh",
  "proptest",
- "sov-bank",
- "sov-modules-api",
- "sov-modules-stf-template",
- "sov-rollup-interface",
- "sov-state",
- "sov-value-setter",
+ "sov-bank 0.2.0",
+ "sov-modules-api 0.2.0",
+ "sov-modules-stf-template 0.2.0",
+ "sov-rollup-interface 0.2.0",
+ "sov-state 0.2.0",
+ "sov-value-setter 0.2.0",
+]
+
+[[package]]
+name = "sov-data-generators"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc#606a6f9dc0c639828f6391cbd48ebb48fc4be93a"
+dependencies = [
+ "borsh",
+ "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-modules-stf-template 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-value-setter 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
 ]
 
 [[package]]
@@ -8506,9 +8997,43 @@ dependencies = [
  "proptest-derive",
  "rocksdb",
  "serde",
- "sov-rollup-interface",
- "sov-schema-db",
+ "sov-rollup-interface 0.2.0",
+ "sov-schema-db 0.2.0",
  "tempfile",
+ "tokio",
+]
+
+[[package]]
+name = "sov-db"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc#606a6f9dc0c639828f6391cbd48ebb48fc4be93a"
+dependencies = [
+ "anyhow",
+ "bincode",
+ "borsh",
+ "byteorder",
+ "jmt",
+ "rocksdb",
+ "serde",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-schema-db 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "tokio",
+]
+
+[[package]]
+name = "sov-db"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
+dependencies = [
+ "anyhow",
+ "bincode",
+ "borsh",
+ "byteorder",
+ "jmt",
+ "rocksdb",
+ "serde",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-schema-db 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
  "tokio",
 ]
 
@@ -8521,9 +9046,9 @@ dependencies = [
  "bincode",
  "borsh",
  "clap 4.4.6",
- "const-rollup-config",
+ "const-rollup-config 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
  "criterion",
- "demo-stf",
+ "demo-stf 0.2.0",
  "ethereum-types",
  "ethers",
  "ethers-contract",
@@ -8547,21 +9072,21 @@ dependencies = [
  "serde",
  "serde_json",
  "sha2 0.10.8",
- "sov-bank",
- "sov-celestia-adapter",
- "sov-cli",
- "sov-db",
- "sov-ethereum",
- "sov-evm",
- "sov-modules-api",
- "sov-modules-stf-template",
- "sov-nft-module",
- "sov-risc0-adapter",
- "sov-rollup-interface",
- "sov-sequencer",
- "sov-state",
- "sov-stf-runner",
- "sov-zk-cycle-macros",
+ "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-celestia-adapter 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-cli 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-db 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-ethereum 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-evm 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-modules-stf-template 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-nft-module 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-risc0-adapter 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-sequencer 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-stf-runner 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-zk-cycle-macros 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
  "tempfile",
  "tendermint 0.32.2",
  "tokio",
@@ -8575,16 +9100,34 @@ version = "0.2.0"
 dependencies = [
  "anyhow",
  "borsh",
- "demo-stf",
+ "demo-stf 0.2.0",
  "ethers",
  "jsonrpsee 0.20.2",
  "reth-primitives",
  "reth-rpc-types",
  "serde_json",
- "sov-evm",
- "sov-modules-api",
- "sov-rollup-interface",
+ "sov-evm 0.2.0",
+ "sov-modules-api 0.2.0",
+ "sov-rollup-interface 0.2.0",
  "tokio",
+]
+
+[[package]]
+name = "sov-ethereum"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "demo-stf 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "ethers",
+ "jsonrpsee 0.20.2",
+ "reth-primitives",
+ "reth-rpc-types",
+ "serde_json",
+ "sov-evm 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
 ]
 
 [[package]]
@@ -8615,12 +9158,82 @@ dependencies = [
  "secp256k1 0.27.0",
  "serde",
  "serde_json",
- "sov-evm",
- "sov-modules-api",
- "sov-state",
+ "sov-evm 0.2.0",
+ "sov-modules-api 0.2.0",
+ "sov-state 0.2.0",
  "tempfile",
  "thiserror",
  "tokio",
+ "tracing",
+]
+
+[[package]]
+name = "sov-evm"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc#606a6f9dc0c639828f6391cbd48ebb48fc4be93a"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "bytes",
+ "clap 4.4.6",
+ "derive_more",
+ "ethereum-types",
+ "ethers",
+ "ethers-contract",
+ "ethers-core",
+ "ethers-middleware",
+ "ethers-signers",
+ "hex",
+ "jsonrpsee 0.20.2",
+ "lazy_static",
+ "reth-interfaces",
+ "reth-primitives",
+ "reth-revm",
+ "reth-rpc-types",
+ "reth-rpc-types-compat",
+ "revm",
+ "schemars",
+ "secp256k1 0.27.0",
+ "serde",
+ "serde_json",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "thiserror",
+ "tracing",
+]
+
+[[package]]
+name = "sov-evm"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "bytes",
+ "clap 4.4.6",
+ "derive_more",
+ "ethereum-types",
+ "ethers",
+ "ethers-contract",
+ "ethers-core",
+ "ethers-middleware",
+ "ethers-signers",
+ "hex",
+ "jsonrpsee 0.20.2",
+ "lazy_static",
+ "reth-interfaces",
+ "reth-primitives",
+ "reth-revm",
+ "reth-rpc-types",
+ "reth-rpc-types-compat",
+ "revm",
+ "schemars",
+ "secp256k1 0.27.0",
+ "serde",
+ "serde_json",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "thiserror",
  "tracing",
 ]
 
@@ -8633,17 +9246,77 @@ dependencies = [
 ]
 
 [[package]]
+name = "sov-first-read-last-write-cache"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc#606a6f9dc0c639828f6391cbd48ebb48fc4be93a"
+dependencies = [
+ "thiserror",
+]
+
+[[package]]
+name = "sov-first-read-last-write-cache"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
+dependencies = [
+ "thiserror",
+]
+
+[[package]]
+name = "sov-ibc"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "derive_more",
+ "ibc",
+ "ibc-query",
+ "jsonrpsee 0.20.2",
+ "prost 0.12.1",
+ "schemars",
+ "serde",
+ "serde_json",
+ "sov-chain-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-ibc-transfer",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-modules-macros 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "tendermint 0.34.0",
+ "thiserror",
+]
+
+[[package]]
+name = "sov-ibc-transfer"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "ibc",
+ "jsonrpsee 0.20.2",
+ "prost 0.12.1",
+ "schemars",
+ "serde",
+ "serde_json",
+ "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-modules-macros 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "thiserror",
+ "uint",
+]
+
+[[package]]
 name = "sov-module-schemas"
 version = "0.2.0"
 dependencies = [
- "sov-accounts",
- "sov-bank",
- "sov-evm",
- "sov-modules-api",
+ "sov-accounts 0.2.0",
+ "sov-bank 0.2.0",
+ "sov-evm 0.2.0",
+ "sov-modules-api 0.2.0",
  "sov-prover-incentives",
- "sov-rollup-interface",
- "sov-sequencer-registry",
- "sov-value-setter",
+ "sov-rollup-interface 0.2.0",
+ "sov-sequencer-registry 0.2.0",
+ "sov-value-setter 0.2.0",
 ]
 
 [[package]]
@@ -8670,14 +9343,66 @@ dependencies = [
  "serde",
  "serde_json",
  "sha2 0.10.8",
- "sov-bank",
- "sov-first-read-last-write-cache",
- "sov-modules-api",
- "sov-modules-macros",
- "sov-rollup-interface",
- "sov-state",
- "sov-zk-cycle-macros",
+ "sov-bank 0.2.0",
+ "sov-first-read-last-write-cache 0.2.0",
+ "sov-modules-api 0.2.0",
+ "sov-modules-macros 0.2.0",
+ "sov-rollup-interface 0.2.0",
+ "sov-state 0.2.0",
+ "sov-zk-cycle-macros 0.2.0",
  "tempfile",
+ "thiserror",
+]
+
+[[package]]
+name = "sov-modules-api"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc#606a6f9dc0c639828f6391cbd48ebb48fc4be93a"
+dependencies = [
+ "anyhow",
+ "bech32",
+ "borsh",
+ "clap 4.4.6",
+ "derive_more",
+ "ed25519-dalek 2.0.0",
+ "hex",
+ "jmt",
+ "jsonrpsee 0.20.2",
+ "rand 0.8.5",
+ "schemars",
+ "serde",
+ "serde_json",
+ "sha2 0.10.8",
+ "sov-first-read-last-write-cache 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-modules-macros 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "thiserror",
+]
+
+[[package]]
+name = "sov-modules-api"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
+dependencies = [
+ "anyhow",
+ "bech32",
+ "borsh",
+ "clap 4.4.6",
+ "derive_more",
+ "ed25519-dalek 2.0.0",
+ "hex",
+ "jmt",
+ "jsonrpsee 0.20.2",
+ "rand 0.8.5",
+ "schemars",
+ "serde",
+ "serde_json",
+ "sha2 0.10.8",
+ "sov-first-read-last-write-cache 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-modules-macros 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
  "thiserror",
 ]
 
@@ -8694,13 +9419,43 @@ dependencies = [
  "schemars",
  "serde",
  "serde_json",
- "sov-bank",
- "sov-modules-api",
- "sov-modules-macros",
- "sov-state",
+ "sov-bank 0.2.0",
+ "sov-modules-api 0.2.0",
+ "sov-modules-macros 0.2.0",
+ "sov-state 0.2.0",
  "syn 1.0.109",
  "tempfile",
  "trybuild",
+]
+
+[[package]]
+name = "sov-modules-macros"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc#606a6f9dc0c639828f6391cbd48ebb48fc4be93a"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "jsonrpsee 0.20.2",
+ "proc-macro2 1.0.69",
+ "quote 1.0.33",
+ "schemars",
+ "serde_json",
+ "syn 1.0.109",
+]
+
+[[package]]
+name = "sov-modules-macros"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "jsonrpsee 0.20.2",
+ "proc-macro2 1.0.69",
+ "quote 1.0.33",
+ "schemars",
+ "serde_json",
+ "syn 1.0.109",
 ]
 
 [[package]]
@@ -8714,11 +9469,45 @@ dependencies = [
  "risc0-zkvm",
  "risc0-zkvm-platform",
  "serde",
- "sov-modules-api",
- "sov-rollup-interface",
- "sov-state",
- "sov-zk-cycle-macros",
- "sov-zk-cycle-utils",
+ "sov-modules-api 0.2.0",
+ "sov-rollup-interface 0.2.0",
+ "sov-state 0.2.0",
+ "sov-zk-cycle-macros 0.2.0",
+ "sov-zk-cycle-utils 0.2.0",
+ "thiserror",
+ "tracing",
+]
+
+[[package]]
+name = "sov-modules-stf-template"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc#606a6f9dc0c639828f6391cbd48ebb48fc4be93a"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "hex",
+ "jmt",
+ "serde",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "thiserror",
+ "tracing",
+]
+
+[[package]]
+name = "sov-modules-stf-template"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "hex",
+ "jmt",
+ "serde",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
  "thiserror",
  "tracing",
 ]
@@ -8734,15 +9523,50 @@ dependencies = [
  "schemars",
  "serde",
  "serde_json",
- "sov-data-generators",
- "sov-modules-api",
- "sov-modules-macros",
- "sov-nft-module",
- "sov-rollup-interface",
- "sov-state",
+ "sov-data-generators 0.2.0",
+ "sov-modules-api 0.2.0",
+ "sov-modules-macros 0.2.0",
+ "sov-nft-module 0.2.0",
+ "sov-rollup-interface 0.2.0",
+ "sov-state 0.2.0",
  "tempfile",
  "tokio",
  "tracing",
+]
+
+[[package]]
+name = "sov-nft-module"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc#606a6f9dc0c639828f6391cbd48ebb48fc4be93a"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "jsonrpsee 0.20.2",
+ "postgres",
+ "schemars",
+ "serde",
+ "serde_json",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-modules-macros 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "tokio",
+ "tracing",
+]
+
+[[package]]
+name = "sov-nft-module"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "jsonrpsee 0.20.2",
+ "schemars",
+ "serde",
+ "serde_json",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-modules-macros 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
 ]
 
 [[package]]
@@ -8755,11 +9579,11 @@ dependencies = [
  "schemars",
  "serde",
  "serde_json",
- "sov-bank",
- "sov-modules-api",
+ "sov-bank 0.2.0",
+ "sov-modules-api 0.2.0",
  "sov-prover-incentives",
- "sov-rollup-interface",
- "sov-state",
+ "sov-rollup-interface 0.2.0",
+ "sov-state 0.2.0",
  "tempfile",
 ]
 
@@ -8777,8 +9601,27 @@ dependencies = [
  "risc0-zkvm",
  "risc0-zkvm-platform",
  "serde",
- "sov-rollup-interface",
- "sov-zk-cycle-utils",
+ "sov-rollup-interface 0.2.0",
+ "sov-zk-cycle-utils 0.2.0",
+]
+
+[[package]]
+name = "sov-risc0-adapter"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
+dependencies = [
+ "anyhow",
+ "bincode",
+ "bytemuck",
+ "once_cell",
+ "parking_lot 0.12.1",
+ "risc0-circuit-rv32im",
+ "risc0-zkp",
+ "risc0-zkvm",
+ "risc0-zkvm-platform",
+ "serde",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-zk-cycle-utils 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
 ]
 
 [[package]]
@@ -8802,6 +9645,44 @@ dependencies = [
 ]
 
 [[package]]
+name = "sov-rollup-interface"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc#606a6f9dc0c639828f6391cbd48ebb48fc4be93a"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "bincode",
+ "borsh",
+ "bytes",
+ "digest 0.10.7",
+ "hex",
+ "serde",
+ "sha2 0.10.8",
+ "thiserror",
+ "tokio",
+]
+
+[[package]]
+name = "sov-rollup-interface"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
+dependencies = [
+ "anyhow",
+ "async-trait",
+ "bincode",
+ "borsh",
+ "bytes",
+ "digest 0.10.7",
+ "hex",
+ "proptest",
+ "proptest-derive",
+ "serde",
+ "sha2 0.10.8",
+ "thiserror",
+ "tokio",
+]
+
+[[package]]
 name = "sov-schema-db"
 version = "0.2.0"
 dependencies = [
@@ -8811,6 +9692,32 @@ dependencies = [
  "prometheus 0.13.3",
  "rocksdb",
  "tempfile",
+ "thiserror",
+ "tracing",
+]
+
+[[package]]
+name = "sov-schema-db"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc#606a6f9dc0c639828f6391cbd48ebb48fc4be93a"
+dependencies = [
+ "anyhow",
+ "once_cell",
+ "prometheus 0.13.3",
+ "rocksdb",
+ "thiserror",
+ "tracing",
+]
+
+[[package]]
+name = "sov-schema-db"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
+dependencies = [
+ "anyhow",
+ "once_cell",
+ "prometheus 0.13.3",
+ "rocksdb",
  "thiserror",
  "tracing",
 ]
@@ -8826,12 +9733,44 @@ dependencies = [
  "jsonrpsee 0.20.2",
  "rand 0.8.5",
  "serde",
- "sov-modules-api",
- "sov-rollup-interface",
- "sov-state",
- "sov-value-setter",
+ "sov-modules-api 0.2.0",
+ "sov-rollup-interface 0.2.0",
+ "sov-state 0.2.0",
+ "sov-value-setter 0.2.0",
  "tempfile",
  "tokio",
+ "tracing",
+]
+
+[[package]]
+name = "sov-sequencer"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc#606a6f9dc0c639828f6391cbd48ebb48fc4be93a"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "hex",
+ "jsonrpsee 0.20.2",
+ "serde",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "tracing",
+]
+
+[[package]]
+name = "sov-sequencer"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "hex",
+ "jsonrpsee 0.20.2",
+ "serde",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
  "tracing",
 ]
 
@@ -8848,14 +9787,48 @@ dependencies = [
  "schemars",
  "serde",
  "serde_json",
- "sov-bank",
- "sov-modules-api",
- "sov-rollup-interface",
- "sov-sequencer-registry",
- "sov-state",
- "sov-zk-cycle-macros",
- "sov-zk-cycle-utils",
+ "sov-bank 0.2.0",
+ "sov-modules-api 0.2.0",
+ "sov-rollup-interface 0.2.0",
+ "sov-sequencer-registry 0.2.0",
+ "sov-state 0.2.0",
+ "sov-zk-cycle-macros 0.2.0",
+ "sov-zk-cycle-utils 0.2.0",
  "tempfile",
+]
+
+[[package]]
+name = "sov-sequencer-registry"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc#606a6f9dc0c639828f6391cbd48ebb48fc4be93a"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "clap 4.4.6",
+ "jsonrpsee 0.20.2",
+ "schemars",
+ "serde",
+ "serde_json",
+ "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+]
+
+[[package]]
+name = "sov-sequencer-registry"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "clap 4.4.6",
+ "jsonrpsee 0.20.2",
+ "schemars",
+ "serde",
+ "serde_json",
+ "sov-bank 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
 ]
 
 [[package]]
@@ -8875,11 +9848,49 @@ dependencies = [
  "serde",
  "serde_json",
  "sha2 0.10.8",
- "sov-db",
- "sov-first-read-last-write-cache",
- "sov-rollup-interface",
- "sov-zk-cycle-macros",
+ "sov-db 0.2.0",
+ "sov-first-read-last-write-cache 0.2.0",
+ "sov-rollup-interface 0.2.0",
+ "sov-zk-cycle-macros 0.2.0",
  "tempfile",
+ "thiserror",
+]
+
+[[package]]
+name = "sov-state"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc#606a6f9dc0c639828f6391cbd48ebb48fc4be93a"
+dependencies = [
+ "anyhow",
+ "bcs 0.1.6",
+ "borsh",
+ "hex",
+ "jmt",
+ "serde",
+ "serde_json",
+ "sha2 0.10.8",
+ "sov-db 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-first-read-last-write-cache 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "thiserror",
+]
+
+[[package]]
+name = "sov-state"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
+dependencies = [
+ "anyhow",
+ "bcs 0.1.6",
+ "borsh",
+ "hex",
+ "jmt",
+ "serde",
+ "serde_json",
+ "sha2 0.10.8",
+ "sov-db 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-first-read-last-write-cache 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
  "thiserror",
 ]
 
@@ -8894,17 +9905,55 @@ dependencies = [
  "jsonrpsee 0.20.2",
  "serde",
  "serde_json",
- "sov-accounts",
- "sov-bank",
- "sov-celestia-adapter",
- "sov-db",
- "sov-modules-api",
- "sov-modules-stf-template",
- "sov-rollup-interface",
- "sov-sequencer",
- "sov-sequencer-registry",
- "sov-state",
+ "sov-accounts 0.2.0",
+ "sov-bank 0.2.0",
+ "sov-celestia-adapter 0.2.0",
+ "sov-db 0.2.0",
+ "sov-modules-api 0.2.0",
+ "sov-modules-stf-template 0.2.0",
+ "sov-rollup-interface 0.2.0",
+ "sov-sequencer 0.2.0",
+ "sov-sequencer-registry 0.2.0",
+ "sov-state 0.2.0",
  "tempfile",
+ "tokio",
+ "toml 0.8.2",
+ "tracing",
+]
+
+[[package]]
+name = "sov-stf-runner"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc#606a6f9dc0c639828f6391cbd48ebb48fc4be93a"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "futures",
+ "hex",
+ "jsonrpsee 0.20.2",
+ "serde",
+ "serde_json",
+ "sov-db 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "tokio",
+ "toml 0.8.2",
+ "tracing",
+]
+
+[[package]]
+name = "sov-stf-runner"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "futures",
+ "hex",
+ "jsonrpsee 0.20.2",
+ "serde",
+ "serde_json",
+ "sov-db 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-rollup-interface 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
  "tokio",
  "toml 0.8.2",
  "tracing",
@@ -8921,10 +9970,44 @@ dependencies = [
  "schemars",
  "serde",
  "serde_json",
- "sov-modules-api",
- "sov-state",
- "sov-value-setter",
+ "sov-modules-api 0.2.0",
+ "sov-state 0.2.0",
+ "sov-value-setter 0.2.0",
  "tempfile",
+ "thiserror",
+]
+
+[[package]]
+name = "sov-value-setter"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc#606a6f9dc0c639828f6391cbd48ebb48fc4be93a"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "clap 4.4.6",
+ "jsonrpsee 0.20.2",
+ "schemars",
+ "serde",
+ "serde_json",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=farhad/demo-rollup-with-ibc)",
+ "thiserror",
+]
+
+[[package]]
+name = "sov-value-setter"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "clap 4.4.6",
+ "jsonrpsee 0.20.2",
+ "schemars",
+ "serde",
+ "serde_json",
+ "sov-modules-api 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
+ "sov-state 0.2.0 (git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration)",
  "thiserror",
 ]
 
@@ -8939,9 +10022,9 @@ dependencies = [
  "schemars",
  "serde",
  "serde_json",
- "sov-modules-api",
- "sov-rollup-interface",
- "sov-state",
+ "sov-modules-api 0.2.0",
+ "sov-rollup-interface 0.2.0",
+ "sov-state 0.2.0",
  "tempfile",
  "thiserror",
 ]
@@ -8956,15 +10039,36 @@ dependencies = [
  "quote 1.0.33",
  "risc0-zkvm",
  "risc0-zkvm-platform",
- "sov-zk-cycle-macros",
- "sov-zk-cycle-utils",
+ "sov-zk-cycle-macros 0.2.0",
+ "sov-zk-cycle-utils 0.2.0",
  "syn 1.0.109",
  "trybuild",
 ]
 
 [[package]]
+name = "sov-zk-cycle-macros"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
+dependencies = [
+ "anyhow",
+ "borsh",
+ "proc-macro2 1.0.69",
+ "quote 1.0.33",
+ "syn 1.0.109",
+]
+
+[[package]]
 name = "sov-zk-cycle-utils"
 version = "0.2.0"
+dependencies = [
+ "risc0-zkvm",
+ "risc0-zkvm-platform",
+]
+
+[[package]]
+name = "sov-zk-cycle-utils"
+version = "0.2.0"
+source = "git+https://github.com/informalsystems/sovereign-sdk?branch=ibc-integration#ff21c4a373fe553ae2749c39a53ea320e9df9dae"
 dependencies = [
  "risc0-zkvm",
  "risc0-zkvm-platform",
@@ -9828,6 +10932,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "sync_wrapper"
+version = "0.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2047c6ded9c721764247e62cd3b03c09ffc529b2ba5b10ec482ae507a4a70160"
+
+[[package]]
 name = "synstructure"
 version = "0.12.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -9914,15 +11024,15 @@ dependencies = [
  "jsonrpsee 0.20.2",
  "serde",
  "serde_json",
- "sov-accounts",
- "sov-bank",
- "sov-modules-api",
- "sov-modules-stf-template",
- "sov-rollup-interface",
- "sov-sequencer",
- "sov-sequencer-registry",
- "sov-state",
- "sov-stf-runner",
+ "sov-accounts 0.2.0",
+ "sov-bank 0.2.0",
+ "sov-modules-api 0.2.0",
+ "sov-modules-stf-template 0.2.0",
+ "sov-rollup-interface 0.2.0",
+ "sov-sequencer 0.2.0",
+ "sov-sequencer-registry 0.2.0",
+ "sov-state 0.2.0",
+ "sov-stf-runner 0.2.0",
  "tracing",
 ]
 
@@ -9984,6 +11094,48 @@ dependencies = [
 ]
 
 [[package]]
+name = "tendermint"
+version = "0.34.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "bc2294fa667c8b548ee27a9ba59115472d0a09c2ba255771092a7f1dcf03a789"
+dependencies = [
+ "bytes",
+ "digest 0.10.7",
+ "ed25519 2.2.2",
+ "ed25519-consensus",
+ "flex-error",
+ "futures",
+ "num-traits",
+ "once_cell",
+ "prost 0.12.1",
+ "prost-types 0.12.1",
+ "serde",
+ "serde_bytes",
+ "serde_json",
+ "serde_repr",
+ "sha2 0.10.8",
+ "signature 2.1.0",
+ "subtle",
+ "subtle-encoding",
+ "tendermint-proto 0.34.0",
+ "time",
+ "zeroize",
+]
+
+[[package]]
+name = "tendermint-light-client-verifier"
+version = "0.34.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "74994da9de4b1144837a367ca2c60c650f5526a7c1a54760a3020959b522e474"
+dependencies = [
+ "derive_more",
+ "flex-error",
+ "serde",
+ "tendermint 0.34.0",
+ "time",
+]
+
+[[package]]
 name = "tendermint-proto"
 version = "0.32.0"
 source = "git+https://github.com/eigerco/celestia-tendermint-rs.git?rev=1f8b574#1f8b574809a43b892f4beb59b887919b484fe232"
@@ -10015,6 +11167,40 @@ dependencies = [
  "serde",
  "serde_bytes",
  "subtle-encoding",
+ "time",
+]
+
+[[package]]
+name = "tendermint-proto"
+version = "0.34.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2cc728a4f9e891d71adf66af6ecaece146f9c7a11312288a3107b3e1d6979aaf"
+dependencies = [
+ "bytes",
+ "flex-error",
+ "num-derive 0.3.3",
+ "num-traits",
+ "prost 0.12.1",
+ "prost-types 0.12.1",
+ "serde",
+ "serde_bytes",
+ "subtle-encoding",
+ "time",
+]
+
+[[package]]
+name = "tendermint-testgen"
+version = "0.34.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a19d4f02b7e38ce790da973fdc9edc71a0e35340ac57737bf278c8379037c1f5"
+dependencies = [
+ "ed25519-consensus",
+ "gumdrop",
+ "serde",
+ "serde_json",
+ "simple-error",
+ "tempfile",
+ "tendermint 0.34.0",
  "time",
 ]
 
@@ -10105,15 +11291,14 @@ dependencies = [
 
 [[package]]
 name = "time"
-version = "0.3.30"
+version = "0.3.29"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c4a34ab300f2dee6e562c10a046fc05e358b29f9bf92277f30c3c8d82275f6f5"
+checksum = "426f806f4089c493dcac0d24c29c01e2c38baf8e30f1b716ee37e83d200b18fe"
 dependencies = [
  "deranged",
  "itoa",
  "libc",
  "num_threads",
- "powerfmt",
  "serde",
  "time-core",
  "time-macros",
@@ -10215,6 +11400,16 @@ dependencies = [
  "socket2 0.5.4",
  "tokio-macros",
  "windows-sys 0.48.0",
+]
+
+[[package]]
+name = "tokio-io-timeout"
+version = "1.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "30b74022ada614a1b4834de765f9bb43877f910cc8ce4be40e89042c9223a8bf"
+dependencies = [
+ "pin-project-lite",
+ "tokio",
 ]
 
 [[package]]
@@ -10386,6 +11581,33 @@ dependencies = [
 ]
 
 [[package]]
+name = "tonic"
+version = "0.10.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d560933a0de61cf715926b9cac824d4c883c2c43142f787595e48280c40a1d0e"
+dependencies = [
+ "async-stream",
+ "async-trait",
+ "axum",
+ "base64 0.21.4",
+ "bytes",
+ "h2",
+ "http",
+ "http-body",
+ "hyper",
+ "hyper-timeout",
+ "percent-encoding",
+ "pin-project",
+ "prost 0.12.1",
+ "tokio",
+ "tokio-stream",
+ "tower",
+ "tower-layer",
+ "tower-service",
+ "tracing",
+]
+
+[[package]]
 name = "tower"
 version = "0.4.13"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -10393,8 +11615,13 @@ checksum = "b8fa9be0de6cf49e536ce1851f987bd21a43b771b09473c3549a6c853db37c1c"
 dependencies = [
  "futures-core",
  "futures-util",
+ "indexmap 1.9.3",
  "pin-project",
  "pin-project-lite",
+ "rand 0.8.5",
+ "slab",
+ "tokio",
+ "tokio-util",
  "tower-layer",
  "tower-service",
  "tracing",

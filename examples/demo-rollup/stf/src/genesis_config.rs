@@ -132,6 +132,8 @@ fn create_genesis_config<C: Context, Da: DaSpec, P: AsRef<Path>>(
 
     Ok(GenesisConfig::new(
         bank_config,
+        ExampleModuleConfig {},
+        TransferConfig {},
         sequencer_registry_config,
         (),
         chain_state_config,
