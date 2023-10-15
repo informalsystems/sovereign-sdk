@@ -11,9 +11,9 @@ anyhow = "1.0.68"
 risc0-zkvm = { version = "0.18", default-features = false, features = ["std"] }
 risc0-zkvm-platform = "0.18"
 demo-stf = { path = "../../../stf" }
-sov-risc0-adapter = { git = "https://github.com/informalsystems/sovereign-sdk", branch = "farhad/demo-rollup-with-ibc" }
-const-rollup-config = { git = "https://github.com/informalsystems/sovereign-sdk", branch = "ibc-integration"}
-sov-celestia-adapter = { git = "https://github.com/informalsystems/sovereign-sdk", branch = "ibc-integration"}
+sov-risc0-adapter = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3" }
+const-rollup-config = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3"}
+sov-celestia-adapter = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3"}
 
 
 [patch.crates-io]
