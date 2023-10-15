@@ -24,31 +24,31 @@ tracing = { workspace = true }
 reth-primitives = { workspace = true, optional = true }
 
 
-sov-stf-runner = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3"}
-sov-rollup-interface = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3"}
-sov-cli = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3", optional = true }
-sov-sequencer-registry = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3"}
-sov-blob-storage = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3"}
-sov-bank = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3"}
-sov-nft-module = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3"}
-simple-nft-module = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3"}
+sov-stf-runner = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610"}
+sov-rollup-interface = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610"}
+sov-cli = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610", optional = true }
+sov-sequencer-registry = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610"}
+sov-blob-storage = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610"}
+sov-bank = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610"}
+sov-nft-module = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610"}
+simple-nft-module = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610"}
 
-sov-chain-state = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3"}
-sov-modules-stf-template = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3"}
-sov-value-setter = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3"}
-sov-accounts = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3"}
-sov-state = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3"}
-sov-modules-api = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3"}
-sov-sequencer = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3", optional = true }
+sov-chain-state = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610"}
+sov-modules-stf-template = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610"}
+sov-value-setter = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610"}
+sov-accounts = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610"}
+sov-state = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610"}
+sov-modules-api = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610"}
+sov-sequencer = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610", optional = true }
 # Only enable the evm on "experimental" feature
-sov-evm = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3", optional = true }
+sov-evm = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610", optional = true }
 
-sov-ibc = { git = "https://github.com/informalsystems/sovereign-ibc", rev = "9617181" }
-sov-ibc-transfer = { git = "https://github.com/informalsystems/sovereign-ibc", rev = "9617181" }
+sov-ibc = { git = "https://github.com/informalsystems/sovereign-ibc", rev = "d1fbcfb" }
+sov-ibc-transfer = { git = "https://github.com/informalsystems/sovereign-ibc", rev = "d1fbcfb" }
 
 [dev-dependencies]
-sov-rollup-interface = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3", features = ["mocks"] }
-sov-data-generators = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3"}
+sov-rollup-interface = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610", features = ["mocks"] }
+sov-data-generators = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610"}
 demo-stf = { path = ".", features = ["native"] }
 tempfile = { workspace = true }
 rand = "0.8"

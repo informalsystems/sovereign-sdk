@@ -13,15 +13,15 @@ default-run = "sov-demo-rollup"
 
 [dependencies]
 # non-optional dependencies
-sov-celestia-adapter = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3", features = ["native"] }
-const-rollup-config = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3" }
-sov-stf-runner = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3", features = ["native"] }
-sov-rollup-interface = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3", features = ["native"] }
-sov-modules-stf-template = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3", features = ["native"] }
-sov-modules-api = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3", features = ["native"] }
-sov-nft-module = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3"}
+sov-celestia-adapter = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610", features = ["native"] }
+const-rollup-config = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610" }
+sov-stf-runner = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610", features = ["native"] }
+sov-rollup-interface = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610", features = ["native"] }
+sov-modules-stf-template = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610", features = ["native"] }
+sov-modules-api = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610", features = ["native"] }
+sov-nft-module = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610"}
 demo-stf = { path = "./stf", features = ["native"] }
-risc0 = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3" }
+risc0 = { path = "./provers/risc0" }
 borsh = { workspace = true, features = ["bytes"]}
 async-trait = { workspace = true, optional = true }
 anyhow = { workspace = true }
@@ -37,19 +37,19 @@ tokio = { workspace = true }
 reth-primitives = { workspace = true, optional = true }
 tracing-subscriber = { version = "0.3.17", features = ["env-filter"] }
 
-sov-db = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3" }
-sov-ethereum = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3", optional = true }
-sov-sequencer = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3" }
-sov-risc0-adapter = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3", features = ["native"] }
-sov-state = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3", features = ["native"] }
-sov-cli = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3" }
+sov-db = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610" }
+sov-ethereum = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610", optional = true }
+sov-sequencer = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610" }
+sov-risc0-adapter = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610", features = ["native"] }
+sov-state = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610", features = ["native"] }
+sov-cli = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610" }
 clap = { workspace = true}
 
 [dev-dependencies]
-sov-rollup-interface = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3", features = ["fuzzing"] }
-sov-evm = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3", features = ["smart_contracts"] }
-sov-bank = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3", features = ["native"] }
-sov-zk-cycle-macros = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "fa31bc3" }
+sov-rollup-interface = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610", features = ["fuzzing"] }
+sov-evm = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610", features = ["smart_contracts"] }
+sov-bank = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610", features = ["native"] }
+sov-zk-cycle-macros = { git = "https://github.com/informalsystems/sovereign-sdk", rev = "33e9610" }
 
 borsh = { workspace = true }
 bincode = { workspace = true }
