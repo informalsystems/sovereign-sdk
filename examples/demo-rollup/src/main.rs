@@ -2,7 +2,7 @@ use std::str::FromStr;
 
 use clap::Parser;
 use demo_stf::genesis_config::GenesisPaths;
-use risc0::{MOCK_DA_ELF, ROLLUP_ELF};
+// use risc0::{MOCK_DA_ELF, ROLLUP_ELF};
 use sov_demo_rollup::{new_rollup_with_celestia_da, new_rollup_with_mock_da, DemoProverConfig};
 use sov_risc0_adapter::host::Risc0Host;
 use tracing_subscriber::prelude::*;
@@ -40,7 +40,7 @@ async fn main() -> Result<(), anyhow::Error> {
 
     match args.da_layer.as_str() {
         "mock" => {
-            let _prover = Risc0Host::new(MOCK_DA_ELF);
+            let _prover = Risc0Host::new(&[]);
             let _config = DemoProverConfig::Execute;
 
             let rollup = new_rollup_with_mock_da::<Risc0Host<'static>, _>(
@@ -52,7 +52,7 @@ async fn main() -> Result<(), anyhow::Error> {
             rollup.run().await
         }
         "celestia" => {
-            let _prover = Risc0Host::new(ROLLUP_ELF);
+            let _prover = Risc0Host::new(&[]);
             let _config = DemoProverConfig::Execute;
 
             let rollup = new_rollup_with_celestia_da::<Risc0Host<'static>, _>(
